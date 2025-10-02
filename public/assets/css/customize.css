@@ -1,0 +1,59 @@
+/* Timeline Style */
+.work-experience .timeline {
+    border-left: 3px solid #0d6efd;
+    /* Màu xanh Bootstrap */
+    padding-left: 20px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.work-experience .timeline-item {
+    position: relative;
+}
+
+.work-experience .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    background-color: #0d6efd;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    top: 5px;
+}
+
+.services-three .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.services-three__single {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Pricing section - cân chiều cao các cột */
+.pricing-one .row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pricing-one .col-xl-4,
+.pricing-one .col-lg-6 {
+    display: flex;
+}
+
+.pricing-one__single {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* giữ nút "Liên hệ" ở cuối */
+    width: 100%;
+}
+
+/* Section Projects */
+.projects .row .card{
+    display:flex;
+}
