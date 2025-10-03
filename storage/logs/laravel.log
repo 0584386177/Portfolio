@@ -6600,3 +6600,19 @@ Did you mean one of these?
 [stacktrace]
 #0 {main}
 "} 
+[2025-10-03 21:59:27] local.ERROR: Declaration of App\Models\User::canAccessPanel(Filament\Panel $panel) must be compatible with Filament\Models\Contracts\FilamentUser::canAccessPanel(Filament\Panel $panel): bool {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Models\\User::canAccessPanel(Filament\\Panel $panel) must be compatible with Filament\\Models\\Contracts\\FilamentUser::canAccessPanel(Filament\\Panel $panel): bool at /home/khanhhoa/sites/techguru/app/Models/User.php:52)
+[stacktrace]
+#0 {main}
+"} 
+[2025-10-03 22:00:10] local.ERROR: Declaration of App\Models\User::canAccessPanel(Filament\Panel $panel) must be compatible with Filament\Models\Contracts\FilamentUser::canAccessPanel(Filament\Panel $panel): bool {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Models\\User::canAccessPanel(Filament\\Panel $panel) must be compatible with Filament\\Models\\Contracts\\FilamentUser::canAccessPanel(Filament\\Panel $panel): bool at /home/khanhhoa/sites/techguru/app/Models/User.php:52)
+[stacktrace]
+#0 {main}
+"} 
+[2025-10-03 22:01:10] local.ERROR: Declaration of App\Models\User::canAccessPanel(Filament\Panel $panel) must be compatible with Filament\Models\Contracts\FilamentUser::canAccessPanel(Filament\Panel $panel): bool {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Models\\User::canAccessPanel(Filament\\Panel $panel) must be compatible with Filament\\Models\\Contracts\\FilamentUser::canAccessPanel(Filament\\Panel $panel): bool at /home/khanhhoa/sites/techguru/app/Models/User.php:52)
+[stacktrace]
+#0 {main}
+"} 
+[2025-10-03 22:02:11] local.ERROR: Declaration of App\Models\User::canAccessPanel(Filament\Panel $panel) must be compatible with Filament\Models\Contracts\FilamentUser::canAccessPanel(Filament\Panel $panel): bool {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Models\\User::canAccessPanel(Filament\\Panel $panel) must be compatible with Filament\\Models\\Contracts\\FilamentUser::canAccessPanel(Filament\\Panel $panel): bool at /home/khanhhoa/sites/techguru/app/Models/User.php:52)
+[stacktrace]
+#0 {main}
+"} 
