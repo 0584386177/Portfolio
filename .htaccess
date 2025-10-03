@@ -1,12 +1,7 @@
-# public_html/.htaccess
 <IfModule mod_rewrite.c>
-    <IfModule mod_negotiation.c>
-        Options -MultiViews
-    </IfModule>
-
     RewriteEngine On
 
-    # Redirect All Requests To The Subfolder
-    RewriteRule ^ /public
-
-</IfModule>
+    # Nếu chưa vào thư mục /public thì tự động chuyển sang /public
+    RewriteCond %{REQUEST_URI} !^/public
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>`
