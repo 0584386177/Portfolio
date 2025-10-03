@@ -32,12 +32,6 @@
                             <img src="<?php echo e(asset('storage/' . $post->thumbnail)); ?>" alt="">
                         </div>
                         <div class="blog-detail__single-content">
-                            <div class="blog-detail__user">
-                                <div class="blog-detail__user-img">
-                                    <img src="<?php echo e(asset('assets/images/blog/blog-detail-user-1.jpg')); ?>" alt="">
-                                </div>
-                                <p class="blog-detail__user-title user_id"></p>
-                            </div>
                             <ul class="blog-detail__meta list-unstyled">
                                 <li>
                                     <span class="far fa-calendar-alt text-warning"></span> Ngày tạo :
@@ -48,7 +42,6 @@
                                     <span class="fal fa-user text-warning"></span> <?php echo e($post->user->name); ?>
 
                                 </li>
-                                
                             </ul>
                             <h3 class="blog-detail__title title"><?php echo e($post->title); ?></h3>
                             <p class="blog-detail__text short_description"><?php echo e($post->short_description); ?></p>

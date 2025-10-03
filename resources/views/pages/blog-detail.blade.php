@@ -14,12 +14,6 @@
                             <img src="{{ asset('storage/' . $post->thumbnail) }}" alt="">
                         </div>
                         <div class="blog-detail__single-content">
-                            <div class="blog-detail__user">
-                                <div class="blog-detail__user-img">
-                                    <img src="{{ asset('assets/images/blog/blog-detail-user-1.jpg') }}" alt="">
-                                </div>
-                                <p class="blog-detail__user-title user_id"></p>
-                            </div>
                             <ul class="blog-detail__meta list-unstyled">
                                 <li>
                                     <span class="far fa-calendar-alt text-warning"></span> Ngày tạo :
@@ -28,10 +22,6 @@
                                 <li>
                                     <span class="fal fa-user text-warning"></span> {{ $post->user->name }}
                                 </li>
-                                {{-- <li>
-                                    <a href="#"><span class="fal fa-comments"></span>89
-                                        Comments</a>
-                                </li> --}}
                             </ul>
                             <h3 class="blog-detail__title title">{{ $post->title }}</h3>
                             <p class="blog-detail__text short_description">{{ $post->short_description }}</p>

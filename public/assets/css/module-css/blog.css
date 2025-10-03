@@ -2148,7 +2148,8 @@ Tập trung vào sự dễ đọc, căn lề trái và các yêu cầu đặc bi
 
 /* --- ĐỊNH DẠNG HÌNH ẢNH --- */
 .blog-detail__content img {
-    width: 800px;
+    min-width: 50%;
+    display: block;
     border-radius: 5px;
 }
 
