@@ -1,17 +1,22 @@
 <?php
 
+use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\PortfolioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
 
 
-// Home Routes
-Route::get('/', [HomeController::class, 'portfolio'])
+// PortFolio Routes
+Route::get('/', [PortfolioController::class, 'portfolio'])
     ->name('index');
-Route::get('/portfolio', [HomeController::class, 'portfolio'])
+Route::get('/portfolio', [PortfolioController::class, 'portfolio'])
     ->name('portfolio');
+// Service Website Routes
 Route::get('/thiet-ke-website', [HomeController::class, 'serviceWebsite'])
     ->name('thiet-ke-website');
+
+
 // Pages Routes about
 Route::get('/about', [PagesController::class, 'about'])
     ->name('about');
@@ -74,16 +79,11 @@ Route::get('/login', [PagesController::class, 'login'])
     ->name('login');
 
 // Blog Routes
-Route::get('/blog', [PagesController::class, 'blog'])
+Route::get('/blog', [BlogController::class, 'blog'])
     ->name('blog');
-Route::get('/blog-carousel', [PagesController::class, 'blog_carousel'])
-    ->name('blog-carousel');
-Route::get('/blog-list', [PagesController::class, 'blog_list'])
-    ->name('blog-list');
-Route::get('/blog-list-2', [PagesController::class, 'blog_list_2'])
-    ->name('blog-list-2');
-Route::get('/blog-details', [PagesController::class, 'blog_details'])
-    ->name('blog-details');
+Route::get('/blog-detail/{id}', [BlogController::class, 'blog_detail'])
+    ->name('blog-detail');
+
 
 
 // Contact Routes

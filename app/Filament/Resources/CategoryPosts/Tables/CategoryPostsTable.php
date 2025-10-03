@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Resources\Posts\Tables;
+namespace App\Filament\Resources\CategoryPosts\Tables;
 
 use Filament\Actions\ActionGroup;
 use Filament\Actions\BulkActionGroup;
@@ -11,34 +11,29 @@ use Filament\Actions\ViewAction;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
-class PostsTable
+class CategoryPostsTable
 {
     public static function configure(Table $table): Table
     {
         return $table
             ->columns([
-                TextColumn::make('title')
-                    ->label('Tiêu đề'),
-                TextColumn::make('category.name')
+                TextColumn::make('name')
                     ->label('Danh mục'),
-                TextColumn::make('user.email')
-                    ->label('Người tạo'),
+                TextColumn::make('slug')
+                    ->label('Slug'),
                 TextColumn::make('created_at')
                     ->label('Ngày tạo')
                     ->date('d-m-Y H:m:s'),
-
             ])
             ->filters([
                 //
             ])
             ->recordActions([
                 ActionGroup::make([
-                    ViewAction::make(),
                     EditAction::make(),
                     DeleteAction::make(),
-
-
-                ]),
+                    ViewAction::make(),
+                ])
             ])
             ->toolbarActions([
                 BulkActionGroup::make([

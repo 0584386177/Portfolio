@@ -53,4 +53,9 @@ class User extends Authenticatable implements FilamentUser
     {
         return true;
     }
+
+    public function posts($post)
+    {
+        return $this->hasMany(Post::class, 'user_id', 'id');
+    }
 }

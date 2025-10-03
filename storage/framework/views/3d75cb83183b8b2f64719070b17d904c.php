@@ -1,108 +1,64 @@
-<?php $__env->startSection('title', 'Login || techguru || IT Solutions & Technology Laravel Template'); ?>
-<?php $__env->startPush('styles'); ?>
-    <link rel="stylesheet" href="<?php echo e(asset('assets/css/module-css/error.css')); ?>">
-    <link rel="stylesheet" href="<?php echo e(asset('assets/css/module-css/shop.css')); ?>">
-<?php $__env->stopPush(); ?>
+<?php $__env->startSection('title', 'KhanhHoa - Tin tức công nghệ'); ?>
+
 
 <?php $__env->startSection('content'); ?>
-    <?php if (isset($component)) { $__componentOriginal666135ff4889d72da89d7606601ff8e6 = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal666135ff4889d72da89d7606601ff8e6 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.strickyHeader','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('strickyHeader'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginal666135ff4889d72da89d7606601ff8e6)): ?>
-<?php $attributes = $__attributesOriginal666135ff4889d72da89d7606601ff8e6; ?>
-<?php unset($__attributesOriginal666135ff4889d72da89d7606601ff8e6); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginal666135ff4889d72da89d7606601ff8e6)): ?>
-<?php $component = $__componentOriginal666135ff4889d72da89d7606601ff8e6; ?>
-<?php unset($__componentOriginal666135ff4889d72da89d7606601ff8e6); ?>
-<?php endif; ?>
-    <?php if (isset($component)) { $__componentOriginalf8d4ea307ab1e58d4e472a43c8548d8e = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginalf8d4ea307ab1e58d4e472a43c8548d8e = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.page-header','data' => ['title' => 'Login','subtitle' => 'Login']] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('page-header'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes(['title' => 'Login','subtitle' => 'Login']); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginalf8d4ea307ab1e58d4e472a43c8548d8e)): ?>
-<?php $attributes = $__attributesOriginalf8d4ea307ab1e58d4e472a43c8548d8e; ?>
-<?php unset($__attributesOriginalf8d4ea307ab1e58d4e472a43c8548d8e); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginalf8d4ea307ab1e58d4e472a43c8548d8e)): ?>
-<?php $component = $__componentOriginalf8d4ea307ab1e58d4e472a43c8548d8e; ?>
-<?php unset($__componentOriginalf8d4ea307ab1e58d4e472a43c8548d8e); ?>
-<?php endif; ?>
-
-
-    <!--Page Header End-->
-
-    <!--Start Login One-->
-    <section class="login-one">
+    <section class="blog-page mt-5">
+        <div class="blog-page__shape-1"></div>
+        <div class="blog-page__shape-2"></div>
         <div class="container">
-            <div class="login-one__form">
-                <div class="inner-title text-center">
-                    <h2>Login Here</h2>
+            <div class="section-title text-center  ">
+                <div class="section-title__tagline-box">
+                    <div class="section-title__tagline-shape-1"></div>
+                    <span class="section-title__tagline">News & Blog</span>
+                    <div class="section-title__tagline-shape-2"></div>
                 </div>
-                <form id="login-one__form" name="Login-one_form" action="#" method="post">
-                    <div class="row">
-                        <div class="col-xl-12">
-                            <div class="form-group">
-                                <div class="input-box">
-                                    <input type="email" name="form_email" id="formEmail" placeholder="Email..."
-                                        required="" value="">
+                <h2 class="section-title__title  mt-5 ">Tin tức <span>Công nghệ </span>
+            </div>
+            <div class="row">
+                <!-- Blog One Single Start -->
+                <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="col-xl-4 col-lg-6 col-md-6  ">
+                        <div class="blog-one__single">
+                            <div class="blog-one__img">
+                               <a href="<?php echo e(route('blog-detail',$post->id)); ?>">
+                                 <img height="200" style="object-fit:cover;"
+                                    src="<?php echo e(asset('storage/' . $post->thumbnail)); ?>" alt="Ảnh bìa">
+                               </a>
+                                <div class="blog-one__tags category_id">
+                                    <span><?php echo e($post->category->name); ?></span>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-12">
-                            <div class="form-group">
-                                <div class="input-box">
-                                    <input type="text" name="form_password" id="formPassword" placeholder="Password..."
-                                        required="" value="">
+                            <div class="blog-one__content">
+                                <ul class="blog-one__meta list-unstyled">
+                                    <li>
+                                        <a href="<?php echo e(route('blog-detail', $post->id)); ?>"><span
+                                                class="far fa-calendar-alt"></span><?php echo e(date_format($post->created_at, 'd-m-Y')); ?></a>
+                                    </li>
+                                    <li>
+                                        <a href="<?php echo e(route('blog-detail', $post->id)); ?>"><span
+                                                class="fal fa-user"></span><?php echo e($post->user->name); ?></a>
+                                    </li>
+                                </ul>
+                                <h3 class="blog-one__title"><a
+                                        href="<?php echo e(route('blog-detail', $post->id)); ?>"><?php echo e($post->title); ?></a>
+                                </h3>
+                                <p class="blog-one__text"><?php echo e($post->short_description); ?></p>
+                                <div class="blog-one__btn-box">
+                                    <a href="<?php echo e(route('blog-detail', $post->id)); ?>" class="thm-btn">Chi tiết<span
+                                            class="icon-right-arrow"></span></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-xl-12">
-                            <div class="form-group">
-                                <button class="thm-btn" type="submit" data-loading-text="Please wait...">Login Here
-                                    <span class="icon-right-arrow"></span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="remember-forget">
-                            <div class="checked-box1">
-                                <input type="checkbox" name="saveMyInfo" id="saveinfo" checked="">
-                                <label for="saveinfo">
-                                    <span></span>
-                                    Remember me
-                                </label>
-                            </div>
-                            <div class="forget">
-                                <a href="#">Forget password?</a>
-                            </div>
-                        </div>
-
-                        <div class="create-account text-center">
-                            <p>Not registered yet? <a href="<?php echo e(route('sign-up')); ?>">Create an Account</a></p>
                         </div>
                     </div>
-                </form>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <!-- Blog One Single Start -->
+
             </div>
         </div>
     </section>
-    <!--End Login One-->
+    <!--Blog Page End-->
+
+
 
     <!-- Newsletter Two Start -->
 
@@ -189,4 +145,4 @@
 <?php endif; ?>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.layout4', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /home/khanhhoa/sites/techguru/resources/views/pages/login.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.layout4', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /home/khanhhoa/sites/techguru/resources/views/pages/blog.blade.php ENDPATH**/ ?>

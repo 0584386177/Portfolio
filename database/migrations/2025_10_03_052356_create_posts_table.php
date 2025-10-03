@@ -18,7 +18,9 @@ return new class extends Migration {
             $table->longText('slug')->unique();
             $table->longText('thumbnail');
             $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('name')->onDelete('restrict');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('category_id')->references('id')->on('categories_post')->onDelete('restrict');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict');
             $table->timestamps();
         });
     }

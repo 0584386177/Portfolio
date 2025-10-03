@@ -141,36 +141,7 @@ class PagesController extends Controller
         return view('pages.login');
     }
 
-
-
-
-
-
-    public function blog()
-    {
-        return view('pages.blog');
-    }
-
-    public function blog_carousel()
-    {
-        return view('pages.blog-carousel');
-    }
-
-    public function blog_list()
-    {
-        return view('pages.blog-list');
-    }
-
-    public function blog_list_2()
-    {
-        return view('pages.blog-list-2');
-    }
-
-    public function blog_details()
-    {
-        return view('pages.blog-details');
-    }
-
+   
 
 
 

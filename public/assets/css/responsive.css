@@ -554,21 +554,21 @@
         display: none;
     }
 
-    .blog-details__left {
+    .blog-detail__left {
         margin-right: 0;
     }
 
-    .blog-details__points-and-img {
+    .blog-detail__points-and-img {
         gap: 20px;
         flex-direction: column;
         align-items: baseline;
     }
 
-    .blog-details__tag-and-share {
+    .blog-detail__tag-and-share {
         flex-direction: column;
     }
 
-    .blog-details__share-box {
+    .blog-detail__share-box {
         margin-top: 20px;
     }
 
@@ -1136,7 +1136,7 @@
         left: -55px;
     }
 
-    .blog-details__left {
+    .blog-detail__left {
         margin-right: 0;
     }
 
@@ -2210,69 +2210,69 @@
         padding-left: 50px;
     }
 
-    .blog-details__left {
+    .blog-detail__left {
         margin-right: 0;
     }
 
-    .blog-details__user {
+    .blog-detail__user {
         position: relative;
         top: 0;
         left: 0;
         transform: rotate(0deg);
     }
 
-    .blog-details__user-img {
+    .blog-detail__user-img {
         transform: rotate(0deg);
     }
 
-    .blog-details__single-content {
+    .blog-detail__single-content {
         padding: 24px 15px 22px;
         padding-left: 15px;
     }
 
-    .blog-details__single-content::before {
+    .blog-detail__single-content::before {
         display: none;
     }
 
-    .blog-details__meta {
+    .blog-detail__meta {
         flex-direction: column;
         align-items: baseline;
         gap: 15px;
         margin-top: 20px;
     }
 
-    .blog-details__meta li+li {
+    .blog-detail__meta li+li {
         margin-left: 0;
     }
 
-    .blog-details__meta li::before {
+    .blog-detail__meta li::before {
         display: none;
     }
 
-    .blog-details__author-box {
+    .blog-detail__author-box {
         padding: 37px 15px 34px;
     }
 
-    .blog-details__points-and-img {
+    .blog-detail__points-and-img {
         gap: 30px;
         flex-direction: column;
         align-items: baseline;
     }
 
-    .blog-details__tag-and-share {
+    .blog-detail__tag-and-share {
         flex-direction: column;
     }
 
-    .blog-details__tag {
+    .blog-detail__tag {
         flex-direction: column;
         margin-bottom: 15px;
     }
 
-    .blog-details__prev-and-next {
+    .blog-detail__prev-and-next {
         flex-direction: column;
     }
 
-    .blog-details__next-box {
+    .blog-detail__next-box {
         margin-top: 15px;
     }
 
@@ -2294,7 +2294,7 @@
         margin-top: 50px;
     }
 
-    .blog-details {
+    .blog-detail {
         padding: 80px 0 0;
     }
 

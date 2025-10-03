@@ -22,7 +22,7 @@
                                 <li><a href="{{ route('services') }}">Services</a></li>
                                <li><span class="icon-right-arrow-1"></span></li>
                             @endif
-                            @if (request()->is(['blog-carousel', 'blog-list', 'blog-list-2', 'blog-details']))
+                            @if (request()->is(['blog-carousel', 'blog-list', 'blog-list-2', 'blog-detail']))
                                 <li><a href="{{ route('blog') }}">Blog</a></li>
                                 <li><span class="icon-right-arrow-1"></span></li>
                             @endif

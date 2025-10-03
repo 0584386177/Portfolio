@@ -49,7 +49,7 @@
     z-index: 1;
 }
 
-.blog-one__img:before {
+/* .blog-one__img:before {
     content: "";
     position: absolute;
     top: 0;
@@ -61,9 +61,9 @@
     transition: background-color 0.5s ease;
     transition: all 0.5s ease;
     z-index: 1;
-}
+} */
 
-.blog-one__single:hover .blog-one__img:before {
+/* .blog-one__single:hover .blog-one__img:before {
     opacity: .50;
 }
 
@@ -76,7 +76,7 @@
 
 .blog-one__single:hover .blog-one__img img {
     transform: scale(1.05) rotate(0deg);
-}
+} */
 
 .blog-one__tags {
     position: absolute;
@@ -96,7 +96,6 @@
     justify-content: center;
     font-size: 14px;
     color: var(--techguru-white);
-    font-weight: 500;
     line-height: 14px;
     background: linear-gradient(270deg, #5CB0E9 0%, #3D72FC 100%);
     border-radius: 14px;
@@ -107,7 +106,6 @@
     position: relative;
     display: block;
     margin-top: 20px;
-    padding-left: 65px;
 }
 
 .blog-one__user {
@@ -1944,41 +1942,41 @@
 /*--------------------------------------------------------------
 # Blog Details
 --------------------------------------------------------------*/
-.blog-details {
+.blog-detail {
     position: relative;
     display: block;
     padding: 140px 0 0;
     z-index: 1;
 }
 
-.blog-details__shape-1 {
+.blog-detail__shape-1 {
     position: absolute;
     top: 17%;
     left: 0;
     z-index: -1;
 }
 
-.blog-details__shape-1 img {
+.blog-detail__shape-1 img {
     width: auto;
 }
 
-.blog-details__left {
+.blog-detail__left {
     position: relative;
     display: block;
     margin-right: 107px;
 }
 
-.blog-details__img {
+.blog-detail__img {
     position: relative;
     display: block;
 }
 
-.blog-details__img img {
+.blog-detail__img img {
     width: 100%;
     border-radius: 40px;
 }
 
-.blog-details__single-content {
+.blog-detail__single-content {
     position: relative;
     display: block;
     margin-top: 24px;
@@ -1988,7 +1986,7 @@
     padding-left: 95px;
 }
 
-.blog-details__single-content::before {
+.blog-detail__single-content::before {
     content: "";
     position: absolute;
     top: 24px;
@@ -1998,7 +1996,7 @@
     background-color: rgba(var(--techguru-white-rgb), .10);
 }
 
-.blog-details__user {
+.blog-detail__user {
     position: absolute;
     top: 84px;
     left: -39px;
@@ -2009,7 +2007,7 @@
     transform: rotate(90deg);
 }
 
-.blog-details__user-img {
+.blog-detail__user-img {
     position: relative;
     display: block;
     width: 32px;
@@ -2018,34 +2016,34 @@
     transform: rotate(-90deg);
 }
 
-.blog-details__user-img img {
+.blog-detail__user-img img {
     width: 100%;
     border-radius: 50%;
 }
 
-.blog-details__user-title {
+.blog-detail__user-title {
     font-size: 16px;
     font-weight: 500;
     color: var(--techguru-white);
 }
 
-.blog-details__meta {
+.blog-detail__meta {
     position: relative;
     display: flex;
     align-items: center;
     margin-bottom: 15px;
 }
 
-.blog-details__meta li {
+.blog-detail__meta li {
     position: relative;
     display: block;
 }
 
-.blog-details__meta li+li {
+.blog-detail__meta li+li {
     margin-left: 26px;
 }
 
-.blog-details__meta li::before {
+.blog-detail__meta li::before {
     content: "";
     position: absolute;
     top: 3px;
@@ -2066,11 +2064,11 @@
     opacity: 1;
 }
 
-.blog-details__meta li:first-child::before {
+.blog-detail__meta li:first-child::before {
     display: none;
 }
 
-.blog-details__meta li a {
+.blog-detail__meta li a {
     position: relative;
     display: flex;
     align-items: center;
@@ -2082,72 +2080,114 @@
     transition: all 500ms ease;
 }
 
-.blog-details__meta li a:hover {
+.blog-detail__meta li a:hover {
     color: var(--techguru-base);
 }
 
-.blog-details__meta li a span {
+.blog-detail__meta li a span {
     position: relative;
     font-size: 14px;
     margin-right: 6px;
     color: var(--techguru-base);
 }
 
-.blog-details__title {
+.blog-detail__title {
     font-size: 30px;
     font-weight: 700;
     line-height: 42px;
     margin-bottom: 15px;
 }
 
-.blog-details__title a {
+.blog-detail__title a {
     color: var(--techguru-white);
 }
 
-.blog-details__title a:hover {
+.blog-detail__title a:hover {
     color: var(--techguru-base);
 }
 
-.blog-details__content {
-    position: relative;
-    display: block;
-    margin-top: 65px;
+/*
+==================================================================
+--- CSS THIẾT KẾ LẠI TOÀN BỘ CHO NỘI DUNG BÀI VIẾT ---
+Tập trung vào sự dễ đọc, căn lề trái và các yêu cầu đặc biệt.
+==================================================================
+*/
+
+/* --- CÀI ĐẶT NỀN TẢNG & TYPOGRAPHY --- */
+.blog-detail__content {
+    color: #e2e8f0;
+    /* Màu chữ trắng ngà, giảm mỏi mắt so với trắng tinh */
+    font-size: 16px;
+    /* Cỡ chữ lớn hơn một chút để đọc thoải mái */
+    line-height: 30px;
+    /* Giãn dòng rộng rãi, yếu tố quan trọng nhất cho sự dễ đọc */
+    text-align: left;
+    /* Đảm bảo mọi thứ mặc định đều căn trái */
 }
 
-.blog-details__title-1 {
+/* --- ĐỊNH DẠNG ĐOẠN VĂN BẢN VÀ CÁC THẺ CƠ BẢN --- */
+.blog-detail__content p {
+    margin-bottom: 1.5rem;
+    /* 1rem = 18px */
+}
+
+
+
+
+/* --- DANH SÁCH (LIST) - CÓ TÙY CHỈNH ĐẶC BIỆT --- */
+.blog-detail__content ol li {
+    list-style-position: outside;
+    /* Đẩy số/dấu đầu dòng ra ngoài để căn lề văn bản thẳng hàng */
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.blog-detail__content li {
+    padding-left: 0.1em;
+}
+
+/* --- ĐỊNH DẠNG HÌNH ẢNH --- */
+.blog-detail__content img {
+    width: 800px;
+    border-radius: 5px;
+}
+
+
+
+.blog-detail__title-1 {
     font-size: 30px;
     font-weight: 500;
     line-height: 40px;
     color: var(--techguru-white);
 }
 
-.blog-details__text-1 {
+.blog-detail__text-1 {
     margin: 35px 0 24px;
 }
 
-.blog-details__points {
+.blog-detail__points {
     position: relative;
     display: block;
 }
 
-.blog-details__points li {
+.blog-detail__points li {
     position: relative;
     display: flex;
     align-items: flex-start;
     gap: 30px;
 }
 
-.blog-details__points li+li {
+.blog-detail__points li+li {
     margin-top: 20px;
 }
 
-.blog-details__points li .icon {
+.blog-detail__points li .icon {
     position: relative;
     display: inline-block;
     top: 6px;
 }
 
-.blog-details__points li .icon span {
+.blog-detail__points li .icon span {
     position: relative;
     display: inline-block;
     font-size: 20px;
@@ -2156,32 +2196,32 @@
     background-clip: text;
 }
 
-.blog-details__points li p span {
+.blog-detail__points li p span {
     font-weight: 700;
 }
 
-.blog-details__img-box {
+.blog-detail__img-box {
     position: relative;
     display: block;
     margin-top: 24px;
 }
 
-.blog-details__img-box .row {
+.blog-detail__img-box .row {
     --bs-gutter-x: 24px;
 }
 
-.blog-details__img-box-img {
+.blog-detail__img-box-img {
     position: relative;
     display: block;
     margin-bottom: 30px;
 }
 
-.blog-details__img-box-img img {
+.blog-detail__img-box-img img {
     width: 100%;
     border-radius: 16px;
 }
 
-.blog-details__title-2 {
+.blog-detail__title-2 {
     font-size: 30px;
     font-weight: 500;
     line-height: 40px;
@@ -2189,7 +2229,7 @@
     margin: 35px 0 25px;
 }
 
-.blog-details__author-box {
+.blog-detail__author-box {
     position: relative;
     display: block;
     background: linear-gradient(270deg, rgba(250, 86, 116, 0.1) 0%, rgba(96, 101, 213, 0.1) 100%);
@@ -2199,7 +2239,7 @@
     z-index: 1;
 }
 
-.blog-details__author-box:before {
+.blog-detail__author-box:before {
     content: "";
     position: absolute;
     top: 0px;
@@ -2223,14 +2263,14 @@
     z-index: -1;
 }
 
-.blog-details__author-name-box {
+.blog-detail__author-name-box {
     position: relative;
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
-.blog-details__author-name-box span {
+.blog-detail__author-name-box span {
     position: relative;
     display: block;
     width: 21px;
@@ -2238,14 +2278,14 @@
     background-color: var(--techguru-white);
 }
 
-.blog-details__author-name {
+.blog-detail__author-name {
     font-size: 32px;
     font-weight: 700;
     line-height: 42px;
     color: var(--techguru-white);
 }
 
-.blog-details__author-text {
+.blog-detail__author-text {
     font-size: 24px;
     font-weight: 400;
     line-height: 35px;
@@ -2255,86 +2295,86 @@
     margin-top: 16px;
 }
 
-.blog-details__author-quote {
+.blog-detail__author-quote {
     position: absolute;
     right: 0;
     bottom: 0;
     z-index: -1;
 }
 
-.blog-details__author-quote img {
+.blog-detail__author-quote img {
     width: auto;
 }
 
-.blog-details__title-3 {
+.blog-detail__title-3 {
     font-size: 30px;
     font-weight: 500;
     line-height: 40px;
     color: var(--techguru-white);
 }
 
-.blog-details__text-3 {
+.blog-detail__text-3 {
     margin: 25px 0 24px;
 }
 
-.blog-details__points-and-img {
+.blog-detail__points-and-img {
     position: relative;
     display: flex;
     align-items: center;
     gap: 50px;
 }
 
-.blog-details__points-2 {
+.blog-detail__points-2 {
     position: relative;
     display: block;
 }
 
-.blog-details__points-list-2 {
+.blog-detail__points-list-2 {
     position: relative;
     display: block;
 }
 
-.blog-details__points-list-2 li {
+.blog-detail__points-list-2 li {
     position: relative;
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.blog-details__points-list-2 li+li {
+.blog-detail__points-list-2 li+li {
     margin-top: 20px;
 }
 
-.blog-details__points-list-2 li .icon {
+.blog-detail__points-list-2 li .icon {
     position: relative;
     display: inline-block;
 }
 
-.blog-details__points-list-2 li .icon>span {
+.blog-detail__points-list-2 li .icon>span {
     position: relative;
     display: inline-block;
     font-size: 16px;
     color: var(--techguru-base);
 }
 
-.blog-details__points-list-2 li p {
+.blog-detail__points-list-2 li p {
     font-weight: 500;
     color: var(--techguru-white);
 }
 
-.blog-details__points-img {
+.blog-detail__points-img {
     position: relative;
     display: block;
     max-width: 300px;
     width: 100%;
 }
 
-.blog-details__points-img img {
+.blog-detail__points-img img {
     width: 100%;
     border-radius: 20px;
 }
 
-.blog-details__tag-and-share {
+.blog-detail__tag-and-share {
     position: relative;
     display: flex;
     align-items: center;
@@ -2344,33 +2384,33 @@
     margin: 64px 0 65px;
 }
 
-.blog-details__tag {
+.blog-detail__tag {
     position: relative;
     display: flex;
     align-items: center;
     gap: 17px;
 }
 
-.blog-details__tag-title {
+.blog-detail__tag-title {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     color: var(--techguru-white);
 }
 
-.blog-details__tag-list {
+.blog-detail__tag-list {
     position: relative;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.blog-details__tag-list li {
+.blog-detail__tag-list li {
     position: relative;
     display: block;
 }
 
-.blog-details__tag-list li a {
+.blog-detail__tag-list li a {
     position: relative;
     display: block;
     font-size: 16px;
@@ -2383,7 +2423,7 @@
     z-index: 1;
 }
 
-.blog-details__tag-list li a:before {
+.blog-detail__tag-list li a:before {
     content: "";
     position: absolute;
     top: 0px;
@@ -2405,7 +2445,7 @@
     z-index: -1;
 }
 
-.blog-details__tag-list li a::after {
+.blog-detail__tag-list li a::after {
     content: "";
     position: absolute;
     top: 0px;
@@ -2420,61 +2460,61 @@
     z-index: -1;
 }
 
-.blog-details__tag-list li a:hover::after {
+.blog-detail__tag-list li a:hover::after {
     opacity: 1;
 }
 
-.blog-details__tag-list li a:hover {
+.blog-detail__tag-list li a:hover {
     color: var(--techguru-white);
 }
 
-.blog-details__share-box {
+.blog-detail__share-box {
     position: relative;
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.blog-details__share-title {
+.blog-detail__share-title {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
     color: var(--techguru-white);
 }
 
-.blog-details__share {
+.blog-detail__share {
     position: relative;
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.blog-details__share a {
+.blog-detail__share a {
     position: relative;
     display: inline-block;
     font-size: 18px;
     color: var(--techguru-white);
 }
 
-.blog-details__share a:hover {
+.blog-detail__share a:hover {
     color: var(--techguru-base);
 }
 
-.blog-details__prev-and-next {
+.blog-detail__prev-and-next {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.blog-details__prev-box {
+.blog-detail__prev-box {
     position: relative;
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.blog-details__prev-img {
+.blog-detail__prev-img {
     position: relative;
     display: block;
     max-width: 80px;
@@ -2482,25 +2522,25 @@
     border-radius: 16px;
 }
 
-.blog-details__prev-img img {
+.blog-detail__prev-img img {
     width: 100%;
     border-radius: 16px;
 }
 
-.blog-details__prev-content {
+.blog-detail__prev-content {
     position: relative;
     display: block;
     flex: 1;
 }
 
-.blog-details__prev-arrow {
+.blog-detail__prev-arrow {
     position: relative;
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.blog-details__prev-arrow a {
+.blog-detail__prev-arrow a {
     position: relative;
     font-size: 16px;
     font-weight: 700;
@@ -2510,7 +2550,7 @@
     background-clip: text;
 }
 
-.blog-details__prev-arrow span {
+.blog-detail__prev-arrow span {
     position: relative;
     font-size: 16px;
     font-weight: 700;
@@ -2520,7 +2560,7 @@
     background-clip: text;
 }
 
-.blog-details__prev-title {
+.blog-detail__prev-title {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;
@@ -2528,14 +2568,14 @@
     margin-top: 7px;
 }
 
-.blog-details__next-box {
+.blog-detail__next-box {
     position: relative;
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.blog-details__next-img {
+.blog-detail__next-img {
     position: relative;
     display: block;
     max-width: 80px;
@@ -2543,19 +2583,19 @@
     border-radius: 16px;
 }
 
-.blog-details__next-img img {
+.blog-detail__next-img img {
     width: 100%;
     border-radius: 16px;
 }
 
-.blog-details__next-content {
+.blog-detail__next-content {
     position: relative;
     display: block;
     text-align: right;
     flex: 1;
 }
 
-.blog-details__next-arrow {
+.blog-detail__next-arrow {
     position: relative;
     display: flex;
     align-items: center;
@@ -2563,7 +2603,7 @@
     gap: 10px;
 }
 
-.blog-details__next-arrow a {
+.blog-detail__next-arrow a {
     position: relative;
     font-size: 16px;
     font-weight: 700;
@@ -2573,7 +2613,7 @@
     background-clip: text;
 }
 
-.blog-details__next-arrow span {
+.blog-detail__next-arrow span {
     position: relative;
     font-size: 16px;
     font-weight: 700;
@@ -2583,7 +2623,7 @@
     background-clip: text;
 }
 
-.blog-details__next-title {
+.blog-detail__next-title {
     font-size: 16px;
     font-weight: 500;
     line-height: 24px;

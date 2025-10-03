@@ -22,7 +22,7 @@
                                 <li><a href="<?php echo e(route('services')); ?>">Services</a></li>
                                <li><span class="icon-right-arrow-1"></span></li>
                             <?php endif; ?>
-                            <?php if(request()->is(['blog-carousel', 'blog-list', 'blog-list-2', 'blog-details'])): ?>
+                            <?php if(request()->is(['blog-carousel', 'blog-list', 'blog-list-2', 'blog-detail'])): ?>
                                 <li><a href="<?php echo e(route('blog')); ?>">Blog</a></li>
                                 <li><span class="icon-right-arrow-1"></span></li>
                             <?php endif; ?>
