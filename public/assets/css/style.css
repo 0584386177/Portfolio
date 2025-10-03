@@ -278,20 +278,28 @@ ul {
   color: var(--techguru-white);
   font-size: 40px;
   line-height: 50px;
-  font-weight: 700;
-  text-transform: capitalize;
   margin-top: 26px;
 }
 
 .section-title__title span {
   color: var(--techguru-base);
-  font-weight: 400;
   font-family: var(--techguru-font-two);
 }
 
 .section-title__title .split-line {
   text-transform: none;
 }
+
+.fade-mask {
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0) 10%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+  mask-repeat: no-repeat;
+  mask-size: cover;
+}
+
 
 
 

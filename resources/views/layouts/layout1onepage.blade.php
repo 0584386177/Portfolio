@@ -10,7 +10,7 @@
 
         <div class="page-wrapper">
 
-            <x-headerPortfoliopage />
+            <x-header />
             @yield('content')
             <x-mobileMenu />
             <x-searchPopup />

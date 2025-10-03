@@ -1,4 +1,4 @@
-<?php $__env->startSection('title', 'Home Three || techguru || IT Solutions & Technology Laravel Template'); ?>
+<?php $__env->startSection('title', 'KhanhHoa - Dịch vụ thiết kế website'); ?>
 <?php $__env->startPush('styles'); ?>
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/module-css/feature.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/module-css/faq.css')); ?>">
@@ -64,7 +64,8 @@
                     <div class="about-three__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
                         <div class="about-three__img-box">
                             <div class="about-three__img">
-                                <img style="border-radius:10px;" src="<?php echo e(asset('assets/images/resources/avatar.jpg')); ?>"
+                                <img style="border-radius:10px;" class="fade-mask"
+                                    src="<?php echo e(asset('assets/images/resources/avatar.jpg')); ?>"
                                     alt="Freelancer thiết kế website">
                             </div>
                         </div>
@@ -90,28 +91,7 @@
                             Website không chỉ là công cụ giới thiệu mà còn là kênh bán hàng hiệu quả giúp bạn phát triển
                             thương hiệu cá nhân và doanh nghiệp.
                         </p>
-                        <div class="about-three__progress-box">
-                            <div class="progress-box">
-                                <div class="bar-title">Thiết kế giao diện sáng tạo</div>
-                                <div class="bar">
-                                    <div class="bar-inner count-bar" data-percent="90%">
-                                        <div class="count-box">
-                                            <span class="count-text" data-stop="90" data-speed="1500">0</span>%
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="progress-box">
-                                <div class="bar-title">Tối ưu SEO & trải nghiệm người dùng</div>
-                                <div class="bar">
-                                    <div class="bar-inner count-bar" data-percent="95%">
-                                        <div class="count-box">
-                                            <span class="count-text" data-stop="95" data-speed="1500">0</span>%
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <ul class="about-three__points list-unstyled">
                             <li>
                                 <div class="icon">
@@ -166,8 +146,8 @@
                     <span class="section-title__tagline">Dịch vụ</span>
                     <div class="section-title__tagline-shape-2"></div>
                 </div>
-                <h2 class="section-title__title title-animation">Trải nghiệm
-                    <span class="text-warning fw-bold">Dịch vụ</span>
+                <h2 class="section-title__title">Trải nghiệm
+                    <span class="text-warning ">dịch vụ</span>
                 </h2>
             </div>
             <div class="row">
@@ -207,8 +187,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <a href="#" class="services-three__btn">Liên Hệ <span
-                                class="icon-right-arrow-1"></span></a>
+                        <a href="#" class="services-three__btn">Liên Hệ <span class="icon-right-arrow-1"></span></a>
                     </div>
                 </div>
 
@@ -304,14 +283,14 @@
                     <span class="section-title__tagline">Pricing &amp; Plan</span>
                     <div class="section-title__tagline-shape-2"></div>
                 </div>
-                <h2 class="section-title__title title-animation text-warning" style="perspective: 400px;">
+                <h2 class="section-title__title text-warning" style="perspective: 400px;">
                     Bảng giá dịch vụ
                 </h2>
             </div>
             <div class="row">
 
                 <!-- Pricing 1: Thiết kế website -->
-                <div class="col-xl-4 col-lg-6 wow fadeInLeft animated" data-wow-delay="100ms">
+                <div class="col-xl-4 col-lg-6 wow" data-wow-delay="100ms">
                     <div class="pricing-one__single">
                         <div class="pricing-one__icon">
                             <img src="assets/images/icon/pricing-icon-1.png" alt="">
@@ -347,7 +326,7 @@
                 </div>
 
                 <!-- Pricing 2: AI Automation -->
-                <div class="col-xl-4 col-lg-6 wow fadeInUp animated" data-wow-delay="200ms">
+                <div class="col-xl-4 col-lg-6 wow " data-wow-delay="200ms">
                     <div class="pricing-one__single active">
                         <div class="pricing-one__icon">
                             <img src="assets/images/icon/pricing-icon-1.png" alt="">
@@ -383,7 +362,7 @@
                 </div>
 
                 <!-- Pricing 3: Hỗ trợ kỹ thuật -->
-                <div class="col-xl-4 col-lg-6 wow fadeInRight animated" data-wow-delay="300ms">
+                <div class="col-xl-4 col-lg-6 wow " data-wow-delay="300ms">
                     <div class="pricing-one__single">
                         <div class="pricing-one__icon">
                             <img src="assets/images/icon/pricing-icon-1.png" alt="">
@@ -439,14 +418,13 @@
                                 <span class="section-title__tagline">Testimonial</span>
                                 <div class="section-title__tagline-shape-2"></div>
                             </div>
-                            <h2 class="section-title__title title-animation text-warning" style="perspective: 400px;">
+                            <h2 class="section-title__title  text-warning" style="perspective: 400px;">
                                 Đánh giá khách hàng
                             </h2>
                         </div>
                         <div class="testimonial-one__carousel owl-theme owl-carousel owl-loaded owl-drag">
                             <div class="owl-stage-outer">
-                                <div class="owl-stage"
-                                    style="transform: translate3d(-2970px, 0px, 0px); transition: 0.5s; width: 6930px;">
+                                <div class="owl-stage">
 
                                     <div class="owl-item active" style="width: 960px; margin-right: 30px;">
                                         <div class="item">
@@ -616,12 +594,12 @@
                         <span class="section-title__tagline">The Numbers Speak</span>
                         <div class="section-title__tagline-shape-2"></div>
                     </div>
-                    <h2 class="section-title__title title-animation">Hơn <span class="text-warning">500+</span> khách hàng
+                    <h2 class="section-title__title">Hơn <span class="text-warning">500+</span> khách hàng
                         đã tin tưởng sử dụng dịch vụ</h2>
                 </div>
                 <div class="row">
                     <!--Counter One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="100ms">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow " data-wow-delay="100ms">
                         <div class="counter-one__single">
                             <div class="counter-one__icon">
                                 <span class="icon-trophy"></span>
@@ -637,7 +615,7 @@
                     </div>
                     <!--Counter One Single End-->
                     <!--Counter One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInLeft" data-wow-delay="200ms">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow " data-wow-delay="200ms">
                         <div class="counter-one__single">
                             <div class="counter-one__icon">
                                 <span class="icon-user"></span>
@@ -653,7 +631,7 @@
                     </div>
                     <!--Counter One Single End-->
                     <!--Counter One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="200ms">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow" data-wow-delay="200ms">
                         <div class="counter-one__single">
                             <div class="counter-one__icon">
                                 <span class="icon-chat"></span>
@@ -669,7 +647,7 @@
                     </div>
                     <!--Counter One Single End-->
                     <!--Counter One Single Start-->
-                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInRight" data-wow-delay="400ms">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow " data-wow-delay="400ms">
                         <div class="counter-one__single">
                             <div class="counter-one__icon">
                                 <span class="icon-laughing"></span>
@@ -705,7 +683,7 @@
                                 <span class="section-title__tagline">FAQ</span>
                                 <div class="section-title__tagline-shape-2"></div>
                             </div>
-                            <h2 class="section-title__title title-animation">
+                            <h2 class="section-title__title">
                                 Giải đáp thắc mắc <br>
                                 <span>Câu hỏi thường gặp</span>
                             </h2>
@@ -755,7 +733,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
-                                        <p>Có, chúng tôi hỗ trợ cài đặt, sửa lỗi và bảo trì phần mềm
+                                        <p>Có hỗ trợ cài đặt, sửa lỗi và bảo trì phần mềm
                                             chỉ từ <strong>100.000đ</strong> cho mỗi lần xử lý.</p>
                                     </div>
                                 </div>
@@ -781,7 +759,7 @@
                                 </div>
                                 <div class="accrodion-content">
                                     <div class="inner">
-                                        <p>Đúng vậy. Chúng tôi có đội ngũ kỹ thuật sẵn sàng hỗ trợ
+                                        <p>Tôi có đội ngũ kỹ thuật sẵn sàng hỗ trợ
                                             <strong>24/7</strong> qua hotline, email hoặc hệ thống ticket.
                                         </p>
                                     </div>
@@ -803,7 +781,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-6">
-                    <div class="contact-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+                    <div class="contact-one__left wow " data-wow-delay="100ms" data-wow-duration="2500ms">
                         <div class="contact-one__left-shape-1"></div>
                         <div class="contact-one__left-shape-2"></div>
                         <h3 class="contact-one__from-title">Gởi yêu cầu hổ trợ </h3>

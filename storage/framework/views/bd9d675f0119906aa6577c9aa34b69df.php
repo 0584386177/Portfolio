@@ -28,10 +28,10 @@
 
         <div class="page-wrapper">
 
-            <?php if (isset($component)) { $__componentOriginal5a5eb7039f4024da0227b18080817481 = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal5a5eb7039f4024da0227b18080817481 = $attributes; } ?>
+            <?php if (isset($component)) { $__componentOriginalfd1f218809a441e923395fcbf03e4272 = $component; } ?>
+<?php if (isset($attributes)) { $__attributesOriginalfd1f218809a441e923395fcbf03e4272 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.header','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('headerStyleTwo'); ?>
+<?php $component->withName('header'); ?>
 <?php if ($component->shouldRender()): ?>
 <?php $__env->startComponent($component->resolveView(), $component->data()); ?>
 <?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
@@ -40,13 +40,13 @@
 <?php $component->withAttributes([]); ?>
 <?php echo $__env->renderComponent(); ?>
 <?php endif; ?>
-<?php if (isset($__attributesOriginal5a5eb7039f4024da0227b18080817481)): ?>
-<?php $attributes = $__attributesOriginal5a5eb7039f4024da0227b18080817481; ?>
-<?php unset($__attributesOriginal5a5eb7039f4024da0227b18080817481); ?>
+<?php if (isset($__attributesOriginalfd1f218809a441e923395fcbf03e4272)): ?>
+<?php $attributes = $__attributesOriginalfd1f218809a441e923395fcbf03e4272; ?>
+<?php unset($__attributesOriginalfd1f218809a441e923395fcbf03e4272); ?>
 <?php endif; ?>
-<?php if (isset($__componentOriginal5a5eb7039f4024da0227b18080817481)): ?>
-<?php $component = $__componentOriginal5a5eb7039f4024da0227b18080817481; ?>
-<?php unset($__componentOriginal5a5eb7039f4024da0227b18080817481); ?>
+<?php if (isset($__componentOriginalfd1f218809a441e923395fcbf03e4272)): ?>
+<?php $component = $__componentOriginalfd1f218809a441e923395fcbf03e4272; ?>
+<?php unset($__componentOriginalfd1f218809a441e923395fcbf03e4272); ?>
 <?php endif; ?>
 
 

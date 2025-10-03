@@ -1,4 +1,4 @@
-<!--Site Footer Start-->
+{{-- <!--Site Footer Start-->
 <footer class="site-footer">
     <div class="site-footer__shape-1">
         <img src="{{ asset('assets/images/shapes/site-footer-shape-1.png') }}" alt="">
@@ -149,4 +149,4 @@
     </div>
 </footer>
 <!--Site Footer End-->
-</div><!-- /.page-wrapper -->
+</div><!-- /.page-wrapper --> --}}

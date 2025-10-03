@@ -1,5 +1,5 @@
 @extends('layouts.layout2')
-@section('title', 'Home Two || techguru || IT Solutions & Technology Laravel Template')
+@section('title', 'KhanhHoa - Portfolio')
 
 
 @section('content')
@@ -98,7 +98,7 @@
                 <!-- Tiêu đề -->
                 <div class="row mb-4">
                     <div class="col text-center">
-                        <h2 class="section-title pb-0 mb-0 text-warning">Technology Stack</h2>
+                        <h1 class="section-title pb-0 mb-0 text-warning">Tech Stack</h1>
                         <p class="section-subtitle text-muted">Những công nghệ & công cụ tôi thường sử dụng</p>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                 <!-- Tiêu đề -->
                 <div class="row mb-4">
                     <div class="col text-center">
-                        <h2 class="section-title pb-0 mb-0 text-warning">Kinh nghiệm làm việc</h2>
+                        <h1 class="section-title pb-0 mb-0 text-warning">Kinh nghiệm làm việc</h1>
                         <p class="section-subtitle text-muted">Hành trình nghề nghiệp & những dự án tôi đã tham gia</p>
                     </div>
                 </div>
@@ -220,7 +220,7 @@
                             <!-- Item 3 -->
                             <li class="timeline-item mb-5">
                                 <h5 class="fw-bold">Website Engineer - Công ty TNHH New Tech</h5>
-                                <p class="text-muted small mb-2">07/2020 - Hiện tại</p>
+                                <p class="text-muted small mb-2">07/2025 - Hiện tại</p>
                                 <ul>
                                     <li>Thiết kế & triển khai giao diện website, tối ưu trải nghiệm người dùng.</li>
                                     <li>Phát triển và tích hợp API, xử lý dữ liệu và xây dựng hệ thống quản lý bằng
@@ -249,7 +249,7 @@
             <!-- Tiêu đề -->
             <div class="row mb-4">
                 <div class="col text-center">
-                    <h2 class="section-title text-warning pb-0 mb-0">Dự án đã thực hiện</h2>
+                    <h1 class="section-title text-warning pb-0 mb-0">Dự án đã thực hiện</h1>
                     <p class="section-subtitle text-muted">
                         Một số sản phẩm & website tôi đã xây dựng
                     </p>
@@ -265,7 +265,7 @@
                             src="https://newtechshop.vn/wp-content/uploads/2023/07/2-newtech-tai-dinh-vi-thuong-hieu.jpg"
                             class="card-img-top rounded-top-3" alt="Website Thương Mại Điện Tử">
                         <div class="card-body bg-dark">
-                            <h2 class="card-title">New Tech Shop</h2>
+                            <h4 class="card-title">New Tech Shop</h4>
                             <p class="card-text small text-warning">
                                 Phát triển website bán hàng bằng <strong>WordPress</strong>, tối ưu trải nghiệm người dùng,
                                 tích hợp API thanh toán và
@@ -288,7 +288,7 @@
                             src="https://techservicelap.vn/wp-content/uploads/2025/04/logo-header-1024x313.png"
                             class="card-img-top rounded-top-3" alt="Website Dịch Vụ Sửa Chữa">
                         <div class="card-body bg-dark">
-                            <h2 class="card-title">Tech Service</h2>
+                            <h4 class="card-title">Tech Service</h4>
                             <p class="card-text small text-warning">
                                 Xây dựng website dịch vụ sửa chữa laptop trên <strong>WordPress</strong>, hỗ trợ form đặt
                                 lịch trực tuyến,
@@ -310,7 +310,7 @@
                             src="https://beta.techservicelap.vn/wp-content/uploads/2025/07/logo-openit-v1.svg"
                             class="card-img-top rounded-top-3" alt="Website Open IT">
                         <div class="card-body bg-dark">
-                            <h2 class="card-title">Open IT</h2>
+                            <h4 class="card-title">Open IT</h4>
                             <p class="card-text small text-warning">
                                 Phát triển website chia sẻ kiến thức sửa chữa phần cứng bằng <strong>WordPress</strong>,
                                 tích hợp giải pháp <strong>crawl dữ liệu từ iFixit</strong> để thử nghiệm quản lý & hiển thị
@@ -336,7 +336,7 @@
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPye4unFUBLGZY88YIygfmoFuP4pfdwBlC6Q&s"
                             class="card-img-top rounded-top-3" alt="Hệ thống Quản lý Lớp học">
                         <div class="card-body bg-dark">
-                            <h2 class="card-title">HH Language Center</h2>
+                            <h4 class="card-title">HH Language Center</h4>
                             <p class="card-text small text-warning">
                                 Xây dựng CMS quản lý lớp học cho trung tâm đào tạo: quản lý học viên, lớp học, xem doanh thu
                                 và học phí.
@@ -351,11 +351,11 @@
 
 
             </div>
-        </div>
+        </div>1
     </section>
 
     <!-- Sliding Text Start -->
-    <section class="sliding-text">
+    {{-- <section class="sliding-text">
         <div class="sliding-text__wrap">
             <ul class="sliding-text__list list-unstyled marquee_mode">
                 <li>
@@ -384,7 +384,7 @@
                 </li>
             </ul>
         </div>
-    </section>
+    </section> --}}
     <!-- Sliding Text End -->
     <section class="contact-one pt-5 pb-5">
         <div class="contact-one__bg-shape"
@@ -392,7 +392,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xl-6 col-lg-6">
-                    <div class="contact-one__left wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms">
+                    <div class="contact-one__left wow" data-wow-delay="100ms" data-wow-duration="2500ms">
                         <div class="contact-one__left-shape-1"></div>
                         <div class="contact-one__left-shape-2"></div>
                         <h3 class="contact-one__from-title">Gởi yêu cầu hổ trợ </h3>
@@ -507,7 +507,6 @@
             </div>
     </section>
     <!-- Contact One End -->
-
     <!-- Newsletter One Start -->
     <section class="newsletter-one pt-5 pb-5">
         <div class="container">
@@ -542,14 +541,14 @@
                     <span class="section-title__tagline">Tin tức công nghệ</span>
                     <div class="section-title__tagline-shape-2"></div>
                 </div>
-                <h2 class="section-title__title title-animation text-warning">Tin tức cộng nghệ mới nhất</h2>
+                <h1 class="section-title text-warning pt-5 mb-0">Tin tức công nghệ mới nhất</h1>
             </div>
             <div class="blog-one__carousel owl-carousel owl-theme">
                 <!-- Blog One Single Start -->
                 <div class="item">
                     <div class="blog-one__single">
                         <div class="blog-one__img">
-                            <img src="{{ asset('assets/images/blog/blog-1-1.jpg') }}" alt="">
+                            <img src="{{ asset('assets/images/resources/background-tin-tuc.webp') }}" alt="">
                             <div class="blog-one__tags">
                                 <span>Digital</span>
                                 <span>Technology</span>
@@ -558,7 +557,8 @@
                         <div class="blog-one__content">
                             <div class="blog-one__user">
                                 <div class="blog-one__user-img">
-                                    <img src="{{ asset('assets/images/blog/blog-one-user-1.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/resources/background-tin-tuc.webp') }}"
+                                        alt="">
                                 </div>
                                 <p class="blog-one__user-title">Alisa Olivia</p>
                             </div>
@@ -586,11 +586,10 @@
                     </div>
                 </div>
                 <!-- Blog One Single Start -->
-                <!-- Blog One Single Start -->
                 <div class="item">
                     <div class="blog-one__single">
                         <div class="blog-one__img">
-                            <img src="{{ asset('assets/images/blog/blog-1-2.jpg') }}" alt="">
+                            <img src="{{ asset('assets/images/resources/background-tin-tuc.webp') }}" alt="">
                             <div class="blog-one__tags">
                                 <span>Digital</span>
                                 <span>Technology</span>
@@ -599,7 +598,8 @@
                         <div class="blog-one__content">
                             <div class="blog-one__user">
                                 <div class="blog-one__user-img">
-                                    <img src="{{ asset('assets/images/blog/blog-one-user-2.jpg') }}" alt="">
+                                    <img src="{{ asset('assets/images/resources/background-tin-tuc.webp') }}"
+                                        alt="">
                                 </div>
                                 <p class="blog-one__user-title">Alisa Olivia</p>
                             </div>
@@ -617,208 +617,6 @@
                             <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">Cybersecurity Best
                                     Practices
                                     Protecting Your Data </a></h3>
-                            <p class="blog-one__text">Explore essential cybersecurity strategies to safeguard
-                                sensitive information and defend against evolving cyber threats.</p>
-                            <div class="blog-one__btn-box">
-                                <a href="{{ route('blog-details') }}" class="thm-btn">Xem thêm<span
-                                        class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog One Single Start -->
-                <!-- Blog One Single Start -->
-                <div class="item">
-                    <div class="blog-one__single">
-                        <div class="blog-one__img">
-                            <img src="{{ asset('assets/images/blog/blog-1-3.jpg') }}" alt="">
-                            <div class="blog-one__tags">
-                                <span>Digital</span>
-                                <span>Technology</span>
-                            </div>
-                        </div>
-                        <div class="blog-one__content">
-                            <div class="blog-one__user">
-                                <div class="blog-one__user-img">
-                                    <img src="{{ asset('assets/images/blog/blog-one-user-3.jpg') }}" alt="">
-                                </div>
-                                <p class="blog-one__user-title">Thomas Alison</p>
-                            </div>
-                            <ul class="blog-one__meta list-unstyled">
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="far fa-calendar-alt"></span>March
-                                        15,
-                                        2025</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="fal fa-comments"></span>88
-                                        Comments</a>
-                                </li>
-                            </ul>
-                            <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">Cloud Computing vs.
-                                    On-Premise
-                                    Solutions Which is Right for You?</a></h3>
-                            <p class="blog-one__text">Explore essential cybersecurity strategies to safeguard
-                                sensitive information and defend against evolving cyber threats.</p>
-                            <div class="blog-one__btn-box">
-                                <a href="{{ route('blog-details') }}" class="thm-btn">Xem thêm<span
-                                        class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog One Single Start -->
-                <!-- Blog One Single Start -->
-                <div class="item">
-                    <div class="blog-one__single">
-                        <div class="blog-one__img">
-                            <img src="{{ asset('assets/images/blog/blog-1-4.jpg') }}" alt="">
-                            <div class="blog-one__tags">
-                                <span>Digital</span>
-                                <span>Technology</span>
-                            </div>
-                        </div>
-                        <div class="blog-one__content">
-                            <div class="blog-one__user">
-                                <div class="blog-one__user-img">
-                                    <img src="{{ asset('assets/images/blog/blog-one-user-4.jpg') }}" alt="">
-                                </div>
-                                <p class="blog-one__user-title">Olivia Emma.</p>
-                            </div>
-                            <ul class="blog-one__meta list-unstyled">
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="far fa-calendar-alt"></span>March
-                                        3,
-                                        2025</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="fal fa-comments"></span>20
-                                        Comments</a>
-                                </li>
-                            </ul>
-                            <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">The Role of AI in Modern
-                                    Solutions Transforming Industries</a></h3>
-                            <p class="blog-one__text">Explore essential cybersecurity strategies to safeguard
-                                sensitive information and defend against evolving cyber threats.</p>
-                            <div class="blog-one__btn-box">
-                                <a href="{{ route('blog-details') }}" class="thm-btn">Xem thêm<span
-                                        class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog One Single Start -->
-                <!-- Blog One Single Start -->
-                <div class="item">
-                    <div class="blog-one__single">
-                        <div class="blog-one__img">
-                            <img src="{{ asset('assets/images/blog/blog-1-5.jpg') }}" alt="">
-                            <div class="blog-one__tags">
-                                <span>Digital</span>
-                                <span>Technology</span>
-                            </div>
-                        </div>
-                        <div class="blog-one__content">
-                            <div class="blog-one__user">
-                                <div class="blog-one__user-img">
-                                    <img src="{{ asset('assets/images/blog/blog-one-user-4.jpg') }}" alt="">
-                                </div>
-                                <p class="blog-one__user-title">Thomas Alison</p>
-                            </div>
-                            <ul class="blog-one__meta list-unstyled">
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="far fa-calendar-alt"></span>April
-                                        5,
-                                        2025</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="fal fa-comments"></span>80
-                                        Comments</a>
-                                </li>
-                            </ul>
-                            <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">Why IT Support is
-                                    Essential for
-                                    Business Success in 2025</a></h3>
-                            <p class="blog-one__text">Explore essential cybersecurity strategies to safeguard
-                                sensitive information and defend against evolving cyber threats.</p>
-                            <div class="blog-one__btn-box">
-                                <a href="{{ route('blog-details') }}" class="thm-btn">Xem thêm<span
-                                        class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog One Single Start -->
-                <!-- Blog One Single Start -->
-                <div class="item">
-                    <div class="blog-one__single">
-                        <div class="blog-one__img">
-                            <img src="{{ asset('assets/images/blog/blog-1-3.jpg') }}" alt="">
-                            <div class="blog-one__tags">
-                                <span>Digital</span>
-                                <span>Technology</span>
-                            </div>
-                        </div>
-                        <div class="blog-one__content">
-                            <div class="blog-one__user">
-                                <div class="blog-one__user-img">
-                                    <img src="{{ asset('assets/images/blog/blog-one-user-3.jpg') }}" alt="">
-                                </div>
-                                <p class="blog-one__user-title">Thomas Alison</p>
-                            </div>
-                            <ul class="blog-one__meta list-unstyled">
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="far fa-calendar-alt"></span>March
-                                        15,
-                                        2025</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="fal fa-comments"></span>88
-                                        Comments</a>
-                                </li>
-                            </ul>
-                            <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">Cloud Computing vs.
-                                    On-Premise
-                                    Solutions Which is Right for You?</a></h3>
-                            <p class="blog-one__text">Explore essential cybersecurity strategies to safeguard
-                                sensitive information and defend against evolving cyber threats.</p>
-                            <div class="blog-one__btn-box">
-                                <a href="{{ route('blog-details') }}" class="thm-btn">Xem thêm<span
-                                        class="icon-right-arrow"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Blog One Single Start -->
-                <div class="item">
-                    <div class="blog-one__single">
-                        <div class="blog-one__img">
-                            <img src="{{ asset('assets/images/blog/blog-1-4.jpg') }}" alt="">
-                            <div class="blog-one__tags">
-                                <span>Digital</span>
-                                <span>Technology</span>
-                            </div>
-                        </div>
-                        <div class="blog-one__content">
-                            <div class="blog-one__user">
-                                <div class="blog-one__user-img">
-                                    <img src="{{ asset('assets/images/blog/blog-one-user-4.jpg') }}" alt="">
-                                </div>
-                                <p class="blog-one__user-title">Olivia Emma.</p>
-                            </div>
-                            <ul class="blog-one__meta list-unstyled">
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="far fa-calendar-alt"></span>March
-                                        3,
-                                        2025</a>
-                                </li>
-                                <li>
-                                    <a href="{{ route('blog-details') }}"><span class="fal fa-comments"></span>20
-                                        Comments</a>
-                                </li>
-                            </ul>
-                            <h3 class="blog-one__title"><a href="{{ route('blog-details') }}">The Role of AI in Modern
-                                    Solutions Transforming Industries</a></h3>
                             <p class="blog-one__text">Explore essential cybersecurity strategies to safeguard
                                 sensitive information and defend against evolving cyber threats.</p>
                             <div class="blog-one__btn-box">
