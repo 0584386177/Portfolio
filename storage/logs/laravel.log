@@ -6592,3 +6592,11 @@ Did you mean one of these?
 #6 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle()
 #7 {main}
 "} 
+[2025-10-03 21:59:02] local.ERROR: Declaration of App\Models\User::canAccessPanel(Filament\Panel $panel) must be compatible with Filament\Models\Contracts\FilamentUser::canAccessPanel(Filament\Panel $panel): bool {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Models\\User::canAccessPanel(Filament\\Panel $panel) must be compatible with Filament\\Models\\Contracts\\FilamentUser::canAccessPanel(Filament\\Panel $panel): bool at /home/khanhhoa/sites/techguru/app/Models/User.php:52)
+[stacktrace]
+#0 {main}
+"} 
+[2025-10-03 21:59:11] local.ERROR: Declaration of App\Models\User::canAccessPanel(Filament\Panel $panel) must be compatible with Filament\Models\Contracts\FilamentUser::canAccessPanel(Filament\Panel $panel): bool {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Declaration of App\\Models\\User::canAccessPanel(Filament\\Panel $panel) must be compatible with Filament\\Models\\Contracts\\FilamentUser::canAccessPanel(Filament\\Panel $panel): bool at /home/khanhhoa/sites/techguru/app/Models/User.php:52)
+[stacktrace]
+#0 {main}
+"} 
