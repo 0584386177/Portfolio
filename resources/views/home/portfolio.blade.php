@@ -98,7 +98,7 @@
                 <!-- Tiêu đề -->
                 <div class="row mb-4">
                     <div class="col text-center">
-                        <h1 class="section-title pb-0 mb-0 text-warning">Tech Stack</h1>
+                        <h1 class="section-title pb-0 mb-0 text-warning text-uppercase">Tech Stack</h1>
                         <p class="section-subtitle text-muted">Những công nghệ & công cụ tôi thường sử dụng</p>
                     </div>
                 </div>
@@ -180,7 +180,7 @@
                 <!-- Tiêu đề -->
                 <div class="row mb-4">
                     <div class="col text-center">
-                        <h1 class="section-title pb-0 mb-0 text-warning">Kinh nghiệm làm việc</h1>
+                        <h1 class="section-title pb-0 mb-0 text-warning text-uppercase">Kinh nghiệm làm việc</h1>
                         <p class="section-subtitle text-muted">Hành trình nghề nghiệp & những dự án tôi đã tham gia</p>
                     </div>
                 </div>
@@ -249,7 +249,7 @@
             <!-- Tiêu đề -->
             <div class="row mb-4">
                 <div class="col text-center">
-                    <h1 class="section-title text-warning pb-0 mb-0">Dự án đã thực hiện</h1>
+                    <h1 class="section-title text-warning pb-0 mb-0 text-uppercase">Dự án đã thực hiện</h1>
                     <p class="section-subtitle text-muted">
                         Một số sản phẩm & website tôi đã xây dựng
                     </p>
@@ -531,17 +531,17 @@
     </section>
     <!-- Newsletter One End -->
     <!-- Blog One Start -->
-    <section class="blog-page mt-5">
+    <section class="blog-page mt-5 pt-0">
         <div class="blog-page__shape-1"></div>
         <div class="blog-page__shape-2"></div>
         <div class="container">
-            <div class="section-title text-center sec-title-animation animation-style1">
+            <div class="section-title text-center mb-3">
                 <div class="section-title__tagline-box">
                     <div class="section-title__tagline-shape-1"></div>
                     <span class="section-title__tagline">News & Blog</span>
                     <div class="section-title__tagline-shape-2"></div>
                 </div>
-                <h2 class="section-title__title title-animation mt-5 ">Tin tức <span>Công nghệ </span>
+                <h2 class="section-title__title mt-3 text-uppercase ">Tin tức <span>Công nghệ </span>
             </div>
             <div class="row">
                 <!-- Blog One Single Start -->

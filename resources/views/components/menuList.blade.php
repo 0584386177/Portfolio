@@ -1,3 +1,7 @@
+@php
+    use App\Models\CategoryPost;
+    $categories = CategoryPost::all();
+@endphp
 <ul class="main-menu__list">
     <li class="">
         <a href="{{ route('portfolio') }}">TRANG CHỦ</a>
@@ -50,7 +54,20 @@
             <li><a href="{{ route('login') }}">Login</a></li>
         </ul>
     </li> --}}
-    <li>
+    <li class="dropdown @if (request()->is('category/*')) current @endif">
         <a href="{{ route('blog') }}">BÀI VIẾT</a>
+        <ul class="">
+            @foreach ($categories as $category)
+                <li>
+                    <a href="{{ route('category.show', $category->slug) }}"
+                        class="@if (request()->is('category/' . $category->slug)) active @endif">
+                        {{ $category->name }}
+                    </a>
+                </li>
+            @endforeach
+        </ul>
     </li>
+
+
+
 </ul>

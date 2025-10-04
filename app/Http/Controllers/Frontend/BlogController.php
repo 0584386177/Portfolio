@@ -37,9 +37,12 @@ class BlogController extends Controller
 
     }
 
-    public function blog_detail($id)
+    public function blog_detail($slug)
     {
-        $post = Post::with(['user', 'category'])->find($id);
+        $post = Post::with(['user', 'category'])
+            ->where('slug', $slug)
+            ->first();
+
         if (!$post) {
             return view('pages.404');
         }

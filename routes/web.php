@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Frontend\BlogController;
+use App\Http\Controllers\Frontend\CategoryPostController;
 use App\Http\Controllers\Frontend\PortfolioController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -15,6 +16,10 @@ Route::get('/portfolio', [PortfolioController::class, 'portfolio'])
 // Service Website Routes
 Route::get('/thiet-ke-website', [HomeController::class, 'serviceWebsite'])
     ->name('thiet-ke-website');
+
+// Category Post Routes
+Route::get('/category/{slug}', [CategoryPostController::class, 'show'])
+    ->name('category.show');
 
 
 // Pages Routes about
@@ -81,7 +86,7 @@ Route::get('/login', [PagesController::class, 'login'])
 // Blog Routes
 Route::get('/blog', [BlogController::class, 'blog'])
     ->name('blog');
-Route::get('/blog-detail/{id}', [BlogController::class, 'blog_detail'])
+Route::get('/blog/{slug}', [BlogController::class, 'blog_detail'])
     ->name('blog-detail');
 
 

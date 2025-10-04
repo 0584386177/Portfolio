@@ -2048,12 +2048,11 @@
     }
 
     .faq-one .faq-one-accrodion .accrodion-title {
-        padding: 25px 25px 25px;
-        padding-right: 50px;
+        padding: 5px 50px 5px 17px;
     }
 
     .faq-one .faq-one-accrodion .accrodion-title h4 {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .faq-one .faq-one-accrodion .accrodion-title h4::before {
@@ -2206,9 +2205,7 @@
         left: -65px;
     }
 
-    .blog-one__content {
-        padding-left: 50px;
-    }
+
 
     .blog-detail__left {
         margin-right: 0;
@@ -2308,8 +2305,9 @@
     .comment-one__author-inner {
         text-align: center;
     }
-    .blog-detail__img img{
-        border-radius:20px;
+
+    .blog-detail__img img {
+        border-radius: 20px;
     }
 
     .comment-one__image {
