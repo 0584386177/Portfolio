@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "nimble-alpha-465316-e4",
+  "private_key_id": "816b6dd54eec28f52102956df0b4427219921894",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDdhJw46lh/nICe\nyDV/KB7aff+1sROIPsDqWiSGv3o3rtAzEjyPdlKQiTNqYRR+PahFs9Wc68y1Um3q\nyWjb/lk6CqTgwV7iI3z9xXa3GlmSUcKsGPVVXuh97x6LsOMyU7kIUapVvgc4Dioc\nkaKF3W7JMnL9clx3nzGAyEchkp/Sz9KNSpMK8jZBsrowutybSyh9+5vZAeHo40u2\n6euiwhuDBJWERkUzPB/GQqFf5pirTW16CHicquzzmaGwA9tgd6Ssuju7Nq2MM9Gh\n3axXW18UYcVb99nnh1tN3s5/jqRVP96fBzucwVj4tDzoujiddoX+WWKJwfv4RCu3\nwQZePQ1jAgMBAAECggEAJgdlFnRM2yOQBTJT1M+bdGEbLCMJOmOjlNgC20s1/Sc6\nwPnJgcuLYxraw9GExiNppwW3j2f/zcUn753CLbpdsRQwuBEaa/IxvBNRTR/t7quw\nowDp5U0U1sHdWZf1eSdcZaw3dN7ZuGreGed6okaghVPu38npS/P9eKFpbL8SRwtq\nw0+hy5WWWEg1mAR9+r8KS+cCPzUkKK4ZnyVqwq/DAJdov8hOh/0cUSqdHpGjkwFi\nTAD/ZNPEWpJe85pMrDxQE3V5YIcrZ7cfzNWmK3AN3mGhiJ8gd6uarJvGiQh2rLNd\nIy3MtFT1VDDX6qfF7WrzruWrZXzI7Vd6qa+Le2HFeQKBgQD3qc3wiH8skIAN392w\nlWGl0bYosybzcHYBh2OJCpVFp0UXfuLomZJ5pbMCUjZFN1BmOaikDeaJkV5KebFU\nEe3YEQG73iofEpjDaDSmNI/+B3rAYPjjiTejw9UGKCOm2brbtMFq0B/xJJD/+bib\n/T5XBWK6VhJ4BZ7SUaYcGBHhTQKBgQDk+YDXf2RFveG92osrFbPhH8i2JvBEGJVI\nnCwUF6a7rwz7qWTyhDys4PGXbUgoNOqi98LYOZjVdlRVu9tuJubmTV4mH50LAfpz\nDA1MdxGFcjZokSGo1Df0VPGpGvBmmZ8i2Ub6jJBwbRU9/d8U2ecE8z6NMJwY47ur\nmoZJBX9RbwKBgDGp1WhEluwC1gryN2xvqDMuSI8EzezHQoKv+Z/DhYeAMXSytyHZ\nmevW9Hykq8lZfD/jlBPBzdcMVZItsQegyMcpMeXQeTXd7tBQly41ICLasRze1Uob\nfBLU9GTVq8CLrNLd/mNC9QTQRltuYjy1nciphdDD7dQvnFekk+DSWtOJAoGBAOKD\n1Sracpbvxl8r0NsZiC6gY82W7b9f1mbTYGOsFhy7iot3w06K9P9NNJLJ4EUuPCRm\nGBIRwJkDi2CZC/WHdIrGZOowAgq+tUWU2Z8Yd3PdTefaE0NSVdxXIA5bgRDuzlgK\nPEZmQgmGUCpYeJTHD9x8yhegy/tvZtvXbRrV3mLvAoGAfVOubGdTp5TUh9SCeYy1\nHIBqKPGOY6ZSZacGSY7XOl9PfedawQsdTcZphFcHmk2/jWmS/Lrf0/drntxBESBz\n2VJdDK1UZCEzYZbKgUr508DHgFgFkZfy/XaHYptUS6yM3egAV0B16fI1gNzzRn1A\ncfOzZaR+8rn58B3TY/MGa6E=\n-----END PRIVATE KEY-----\n",
+  "client_email": "download-google-drive@nimble-alpha-465316-e4.iam.gserviceaccount.com",
+  "client_id": "117838343155619409425",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/download-google-drive%40nimble-alpha-465316-e4.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

@@ -54,7 +54,12 @@ class User extends Authenticatable implements FilamentUser
         return true;
     }
 
-    public function posts($post)
+    public function softwares()
+    {
+        return $this->hasMany(Software::class, 'user_id', 'id');
+    }
+
+    public function posts()
     {
         return $this->hasMany(Post::class, 'user_id', 'id');
     }

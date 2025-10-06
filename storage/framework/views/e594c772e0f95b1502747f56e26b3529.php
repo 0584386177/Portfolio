@@ -1,89 +1,75 @@
-<?php $__env->startSection('title', 'Blog Details || techguru || IT Solutions & Technology Laravel Template'); ?>
-
-
+<?php $__env->startSection('title', 'KhanhHoa - Tin tức công nghệ'); ?>
 <?php $__env->startSection('content'); ?>
-    <?php if (isset($component)) { $__componentOriginal666135ff4889d72da89d7606601ff8e6 = $component; } ?>
-<?php if (isset($attributes)) { $__attributesOriginal666135ff4889d72da89d7606601ff8e6 = $attributes; } ?>
-<?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.strickyHeader','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
-<?php $component->withName('strickyHeader'); ?>
-<?php if ($component->shouldRender()): ?>
-<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
-<?php if (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag): ?>
-<?php $attributes = $attributes->except(\Illuminate\View\AnonymousComponent::ignoredParameterNames()); ?>
-<?php endif; ?>
-<?php $component->withAttributes([]); ?>
-<?php echo $__env->renderComponent(); ?>
-<?php endif; ?>
-<?php if (isset($__attributesOriginal666135ff4889d72da89d7606601ff8e6)): ?>
-<?php $attributes = $__attributesOriginal666135ff4889d72da89d7606601ff8e6; ?>
-<?php unset($__attributesOriginal666135ff4889d72da89d7606601ff8e6); ?>
-<?php endif; ?>
-<?php if (isset($__componentOriginal666135ff4889d72da89d7606601ff8e6)): ?>
-<?php $component = $__componentOriginal666135ff4889d72da89d7606601ff8e6; ?>
-<?php unset($__componentOriginal666135ff4889d72da89d7606601ff8e6); ?>
-<?php endif; ?>
-    <!--Blog Details Start-->
-    <section class="blog-detail pt-5">
+    <section class="software-page mt-5">
+        <div class="software-page__shape-1"></div>
+        <div class="software-page__shape-2"></div>
         <div class="container">
+            <div class="section-title text-center mb-5">
+                <div class="section-title__tagline-box">
+                    <div class="section-title__tagline-shape-1"></div>
+                    <span class="section-title__tagline text-uppercase">Thư viện Phần mềm</span>
+                    <div class="section-title__tagline-shape-2"></div>
+                </div>
+                <h2 class="section-title__title">Các công cụ và phần mềm hữu ích</h2>
+            </div>
             <div class="row">
-                <div class="col-xl-12 col-lg-12">
-                    <div class="blog-detail">
-                        <div class="blog-detail__img">
-                            <img src="<?php echo e(asset('storage/' . $post->thumbnail)); ?>" alt="">
-                        </div>
-                        <div class="blog-detail__single-content">
-                            <ul class="blog-detail__meta list-unstyled">
-                                <li>
-                                    <span class="far fa-calendar-alt text-warning"></span> Ngày tạo :
-                                    <?php echo e(date_format($post->created_at, 'd-m-Y')); ?>
-
-                                </li>
-                                <li>
-                                    <span class="fal fa-user text-warning"></span> <?php echo e($post->user->name); ?>
-
-                                </li>
-                            </ul>
-                            <h3 class="blog-detail__title title"><?php echo e($post->title); ?></h3>
-                            <p class="blog-detail__text short_description"><?php echo e($post->short_description); ?></p>
-
-
-                        </div>
-                        <div class="blog-detail__content">
-                            <?php echo $post->description; ?>
-
-                        </div>
-                        <div class="comment-one">
-                            <h3 class="comment-one__title">Total Comments</h3>
-                            <div class="comment-one__single-inner">
-                                <div class="comment-one__single">
-                                    <div class="comment-one__author-inner">
-                                        <div class="comment-one__image">
-                                            <img src="<?php echo e(asset('assets/images/blog/comment-1-1.jpg')); ?>" alt="">
-                                        </div>
-                                        <h3>Mitchell Johnson</h3>
-                                        <span> 04-10-2025</span>
-                                    </div>
-                                    <div class="comment-one__content">
-                                        <p>Thank you very much</p>
-                                        <div class="comment-one__btn-box">
-                                            <a href="#" class="comment-one__btn"><span
-                                                    class="fas fa-share"></span>Reply</a>
-                                        </div>
-                                    </div>
+                
+                <?php if($softwares->count() == 0): ?>
+                    <h1 class="text-center text-uppercase text-danger fw-bold">Đang cập nhật</h1>
+                <?php endif; ?>
+                <?php $__currentLoopData = $softwares; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $software): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                        <div class="software-one__single">
+                            <div class="software-one__img">
+                                <a href="">
+                                    <img height="200" style=" width:100%; object-fit:cover;"
+                                        src="<?php echo e(asset('storage/' . $software->thumbnail)); ?>" alt="Ảnh bìa">
+                                </a>
+                                <div class="software-one__tags version">
+                                    <span>Phiên bản: <?php echo e($software->version ?? 'Mới nhất'); ?></span>
                                 </div>
                             </div>
+                            <div class="software-one__content">
+                                <ul class="software-one__meta list-unstyled">
+                                    
+                                    <li>
+                                        
+                                        <a><span class="far fa-download"></span> <?php echo e($software->download_count); ?> lượt
+                                            tải</a>
+                                    </li>
+                                    <li>
+                                        
+                                        <?php
+                                            $bytes = $software->file_size ?? 0;
+                                            if ($bytes >= 1073741824) {
+                                                $fileSize = number_format($bytes / 1073741824, 2) . ' GB';
+                                            } elseif ($bytes >= 1048576) {
+                                                $fileSize = number_format($bytes / 1048576, 2) . ' MB';
+                                            } elseif ($bytes >= 1024) {
+                                                $fileSize = number_format($bytes / 1024, 2) . ' KB';
+                                            } else {
+                                                $fileSize = $bytes . ' bytes';
+                                            }
+                                        ?>
+                                        <a><span class="far fa-file-archive"></span> <?php echo e($fileSize); ?></a>
+                                    </li>
+                                </ul>
+                                <h3 class="software-one__title"><a href=""><?php echo e($software->name); ?></a>
+                                </h3>
+                                
+                                <div class="software-one__btn-box">
+                                    <a href="<?php echo e(route('software.download', $software->slug)); ?>" class="software-btn">
+                                        DOWNLOAD
+                                    </a>
+                                </div>
 
+                            </div>
                         </div>
                     </div>
-                </div>
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </div>
         </div>
     </section>
-    <!--Blog Details End-->
-
-    <!-- Newsletter One Start -->
-
-
     <?php if (isset($component)) { $__componentOriginal8a8716efb3c62a45938aca52e78e0322 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal8a8716efb3c62a45938aca52e78e0322 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.footer','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -166,4 +152,45 @@
 <?php endif; ?>
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('layouts.layout4', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /home/khanhhoa/sites/techguru/resources/views/pages/blog-detail.blade.php ENDPATH**/ ?>
+<div class="software-page__pagination">
+    <?php echo e($softwares->links()); ?>
+
+</div>
+
+
+<!-- Modal thông báo tải -->
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4">
+            <div class="modal-body">
+                <p class="mb-3">Hãy giữ vững tinh thần và đừng tắt tab nhé<br> File của bạn đang bay về máy...</p>
+
+                <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="text-muted small">Chờ chút xíu thôi... gần xong rồi đó</p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.software-btn');
+        const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                // Hiện popup "Đang tải..."
+                modal.show();
+
+                // Cho trình duyệt tự tải file thật (không fetch)
+                window.location.href = this.getAttribute('href');
+
+                // Tuỳ bạn muốn: ẩn modal sau vài giây, hoặc khi trang reload
+                setTimeout(() => modal.hide(), 8000);
+            });
+        });
+    });
+</script>
+
+<?php echo $__env->make('layouts.layout4', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /home/khanhhoa/sites/techguru/resources/views/pages/software.blade.php ENDPATH**/ ?>

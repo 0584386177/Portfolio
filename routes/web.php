@@ -3,6 +3,7 @@
 use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\CategoryPostController;
 use App\Http\Controllers\Frontend\PortfolioController;
+use App\Http\Controllers\Frontend\SoftwareController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PagesController;
@@ -21,6 +22,16 @@ Route::get('/thiet-ke-website', [HomeController::class, 'serviceWebsite'])
 Route::get('/category/{slug}', [CategoryPostController::class, 'show'])
     ->name('category.show');
 
+// Blog Routes
+Route::get('/blog', [BlogController::class, 'blog'])
+    ->name('blog');
+Route::get('/blog/{slug}', [BlogController::class, 'blog_detail'])
+    ->name('blog-detail');
+
+// Software Routes
+Route::get('/software', [SoftwareController::class, 'index'])
+    ->name('software');
+Route::get('/softwares/download/{software:slug}', [SoftwareController::class, 'download'])->name('software.download');
 
 // Pages Routes about
 Route::get('/about', [PagesController::class, 'about'])
@@ -83,11 +94,6 @@ Route::get('/sign-up', [PagesController::class, 'sign_up'])
 Route::get('/login', [PagesController::class, 'login'])
     ->name('login');
 
-// Blog Routes
-Route::get('/blog', [BlogController::class, 'blog'])
-    ->name('blog');
-Route::get('/blog/{slug}', [BlogController::class, 'blog_detail'])
-    ->name('blog-detail');
 
 
 

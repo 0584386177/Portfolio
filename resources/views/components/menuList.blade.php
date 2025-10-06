@@ -54,6 +54,10 @@
             <li><a href="{{ route('login') }}">Login</a></li>
         </ul>
     </li> --}}
+    <li @if (request()->is(['software'])) class="current" @endif>
+        <a href="{{ route('software') }}">PHẦN MỀM</a>
+    </li>
+
     <li class="dropdown @if (request()->is('category/*')) current @endif">
         <a href="{{ route('blog') }}">BÀI VIẾT</a>
         <ul class="">

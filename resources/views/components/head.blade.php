@@ -58,6 +58,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/pricing.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/event.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/blog.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/css/module-css/software.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/why-choose.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/page-header.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/customize.css') }}">

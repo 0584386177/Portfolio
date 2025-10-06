@@ -547,20 +547,20 @@
                             <div class="blog-one__content">
                                 <ul class="blog-one__meta list-unstyled">
                                     <li>
-                                        <a href="<?php echo e(route('blog-detail', $post->id)); ?>"><span
+                                        <a href="<?php echo e(route('blog-detail', $post->slug)); ?>"><span
                                                 class="far fa-calendar-alt"></span><?php echo e(date_format($post->created_at, 'd-m-Y')); ?></a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo e(route('blog-detail', $post->id)); ?>"><span
+                                        <a href="<?php echo e(route('blog-detail', $post->slug)); ?>"><span
                                                 class="fal fa-user"></span><?php echo e($post->user->name); ?></a>
                                     </li>
                                 </ul>
                                 <h3 class="blog-one__title"><a
-                                        href="<?php echo e(route('blog-detail', $post->id)); ?>"><?php echo e($post->title); ?></a>
+                                        href="<?php echo e(route('blog-detail', $post->slug)); ?>"><?php echo e($post->title); ?></a>
                                 </h3>
                                 <p class="blog-one__text"><?php echo e($post->short_description); ?></p>
                                 <div class="blog-one__btn-box">
-                                    <a href="<?php echo e(route('blog-detail', $post->id)); ?>" class="thm-btn">Chi tiết<span
+                                    <a href="<?php echo e(route('blog-detail', $post->slug)); ?>" class="thm-btn">Chi tiết<span
                                             class="icon-right-arrow"></span></a>
                                 </div>
                             </div>

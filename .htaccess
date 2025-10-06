@@ -4,4 +4,24 @@
     # Nếu chưa vào thư mục /public thì tự động chuyển sang /public
     RewriteCond %{REQUEST_URI} !^/public
     RewriteRule ^(.*)$ public/$1 [L]
-</IfModule>`
+
+
+    # ==============================
+# ALLOW LARGE FILE UPLOADS (1GB, 2GB, 5GB, ...)
+# ==============================
+
+# Cho phép upload tối đa 5GB
+php_value upload_max_filesize 5G
+php_value post_max_size 5G
+
+# Tăng thời gian chờ khi upload file lớn
+php_value max_execution_time 3600
+php_value max_input_time 3600
+
+# Giới hạn bộ nhớ xử lý PHP (6GB để upload 5GB file an toàn)
+php_value memory_limit 6G
+
+# Tắt giới hạn Apache request body (tùy host)
+LimitRequestBody 0
+</IfModule>
+

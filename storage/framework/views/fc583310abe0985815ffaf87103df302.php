@@ -13,6 +13,10 @@
     
     
     
+    <li <?php if(request()->is(['software'])): ?> class="current" <?php endif; ?>>
+        <a href="<?php echo e(route('software')); ?>">PHẦN MỀM</a>
+    </li>
+
     <li class="dropdown <?php if(request()->is('category/*')): ?> current <?php endif; ?>">
         <a href="<?php echo e(route('blog')); ?>">BÀI VIẾT</a>
         <ul class="">
