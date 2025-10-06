@@ -36,7 +36,6 @@ CREATE TABLE `cache` (
 
 LOCK TABLES `cache` WRITE;
 /*!40000 ALTER TABLE `cache` DISABLE KEYS */;
-INSERT INTO `cache` VALUES ('techguru_cache_356a192b7913b04c54574d18c28d46e6395428ab','i:1;',1759519257),('techguru_cache_356a192b7913b04c54574d18c28d46e6395428ab:timer','i:1759519257;',1759519257),('techguru_cache_livewire-rate-limiter:16d36dff9abd246c67dfac3e63b993a169af77e6','i:1;',1759517928),('techguru_cache_livewire-rate-limiter:16d36dff9abd246c67dfac3e63b993a169af77e6:timer','i:1759517928;',1759517928);
 /*!40000 ALTER TABLE `cache` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -295,6 +294,43 @@ LOCK TABLES `sessions` WRITE;
 UNLOCK TABLES;
 
 --
+-- Table structure for table `software`
+--
+
+DROP TABLE IF EXISTS `software`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `software` (
+  `id` bigint unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` bigint unsigned NOT NULL,
+  `name` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `version` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text COLLATE utf8mb4_unicode_ci,
+  `thumbnail` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `file_path` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `file_size` bigint unsigned DEFAULT NULL,
+  `download_count` bigint unsigned NOT NULL DEFAULT '0',
+  `is_active` tinyint(1) NOT NULL DEFAULT '1',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `user_id` (`user_id`),
+  CONSTRAINT `software_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE RESTRICT ON UPDATE RESTRICT
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `software`
+--
+
+LOCK TABLES `software` WRITE;
+/*!40000 ALTER TABLE `software` DISABLE KEYS */;
+INSERT INTO `software` VALUES (10,1,'Phần mềm Office 365 ','phan-mem-office-365','2024','<p>Phần mềm Office 365 Full Crack</p>','software/hero-image.webp','FILE CÀI ĐẶT PHẦN MỀM/files/Office 365.zip',3395517,11,1,'2025-10-05 07:00:21','2025-10-05 08:55:07'),(11,1,'Adobe Photoshop CC 2020','adobe-photoshop-cc-2020','2020','<p>Adobe Full bọ cài Crack Photoshop 2020</p>','software/Adobe-Photoshop-CC-2020.webp','FILE CÀI ĐẶT PHẦN MỀM/files/Photoshop 2020 KhanhHoa 0584386177.rar',NULL,1,1,'2025-10-06 14:40:19','2025-10-06 14:44:34');
+/*!40000 ALTER TABLE `software` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `users`
 --
 
@@ -334,4 +370,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2025-10-04  2:39:24
+-- Dump completed on 2025-10-06 22:09:35

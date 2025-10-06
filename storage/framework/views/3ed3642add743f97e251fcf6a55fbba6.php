@@ -62,6 +62,7 @@
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/module-css/why-choose.css')); ?>" />
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/module-css/page-header.css')); ?>" />
     <link rel="stylesheet" href="<?php echo e(asset('assets/css/customize.css')); ?>">
+    <link rel="stylesheet" href="<?php echo e(asset('assets/css/responsive/customize.css')); ?>">
 
     
     <?php echo $__env->yieldPushContent('styles'); ?>

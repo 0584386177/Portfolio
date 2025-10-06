@@ -62,6 +62,7 @@
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/why-choose.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/module-css/page-header.css') }}" />
     <link rel="stylesheet" href="{{ asset('assets/css/customize.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/responsive/customize.css') }}">
 
     {{-- Additional Styles --}}
     @stack('styles')
