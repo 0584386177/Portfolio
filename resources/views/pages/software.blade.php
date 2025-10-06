@@ -85,16 +85,18 @@
 
 
 <!-- Modal thông báo tải -->
-<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+<div class="modal" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content text-center p-4">
             <div class="modal-body">
-                <p class="mb-3">Hãy giữ vững tinh thần và đừng tắt tab nhé<br> File của bạn đang bay về máy...</p>
+                <p class="mb-3" id="modal-download-message">
+                    Hãy giữ vững tinh thần và đừng tắt tab nhé<br> File của bạn đang bay về máy...
+                </p>
 
                 <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
                     <span class="visually-hidden">Loading...</span>
                 </div>
-                <p class="text-muted small">Chờ chút xíu thôi... gần xong rồi đó</p>
+                <p class="text-dark small">Chờ chút xíu thôi... gần xong rồi đó</p>
             </div>
         </div>
     </div>
@@ -102,17 +104,28 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const buttons = document.querySelectorAll('.software-btn');
+        // Lấy Modal object từ Bootstrap
         const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
+
+        // Lấy phần tử text cần thay đổi bằng ID
+        const messageElement = document.getElementById('modal-download-message');
 
         buttons.forEach(btn => {
             btn.addEventListener('click', function(e) {
+                // 1. CẬP NHẬT TEXT TẠI ĐÂY
+                // Thay đổi nội dung hiển thị ngay khi click
+                if (messageElement) {
+                    messageElement.innerHTML =
+                        '<span class="text-danger">Hệ thống đang chuẩn bị file...</span><br> <span class="text-danger">Vui lòng không đóng cửa sổ!</span>';
+                }
+
                 // Hiện popup "Đang tải..."
                 modal.show();
 
                 // Cho trình duyệt tự tải file thật (không fetch)
                 window.location.href = this.getAttribute('href');
 
-                // Tuỳ bạn muốn: ẩn modal sau vài giây, hoặc khi trang reload
+                // Tuỳ bạn muốn: ẩn modal sau vài giây
                 setTimeout(() => modal.hide(), 8000);
             });
         });

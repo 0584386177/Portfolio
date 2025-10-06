@@ -1,6 +1,12 @@
 /*--------------------------------------------------------------
 # Brand One
 --------------------------------------------------------------*/
+
+.software-page * {
+    box-sizing: border-box !important;
+}
+
+
 .software-one {
     position: relative;
     display: block;
@@ -2890,6 +2896,17 @@ Tập trung vào sự dễ đọc, căn lề trái và các yêu cầu đặc bi
 
 
 @media (max-width: 850px) {
+    .software-page {
+        position: relative;
+        display: block;
+        padding: 70px 0px;
+        z-index: 1;
+    }
+
+    .software-page .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
 
     .software-page .row>.col-6 {
         width: 50%;
