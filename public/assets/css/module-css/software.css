@@ -53,6 +53,7 @@
     overflow: hidden;
     border-radius: 10px;
     z-index: 1;
+    background-color: #fff;
 }
 
 /* .software-one__img:before {
@@ -244,10 +245,6 @@
 
 .software-one__title a {
     color: var(--techguru-white);
-}
-
-.software-one__title a:hover {
-    color: var(--techguru-base);
 }
 
 .software-btn {
@@ -707,9 +704,6 @@
     color: var(--techguru-white);
 }
 
-.software-two__title a:hover {
-    color: var(--techguru-base);
-}
 
 .software-two__text {
     font-size: 16px;
@@ -1027,12 +1021,7 @@
     margin-bottom: 30px;
 }
 
-.software-page__pagination {
-    position: relative;
-    display: block;
-    text-align: center;
-    margin-top: 50px;
-}
+
 
 .software-page__pagination .pg-pagination {
     position: relative;
@@ -2930,6 +2919,7 @@ Tập trung vào sự dễ đọc, căn lề trái và các yêu cầu đặc bi
         width: 100%;
         height: auto;
         position: relative;
+        background: #fff;
     }
 
     .software-one__img img {
@@ -2956,6 +2946,8 @@ Tập trung vào sự dễ đọc, căn lề trái và các yêu cầu đặc bi
         min-height: 50px;
         line-height: 25px;
     }
+
+
 
     .software-one__meta {
         margin-bottom: 5px;

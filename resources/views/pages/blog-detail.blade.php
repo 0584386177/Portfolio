@@ -1,5 +1,5 @@
 @extends('layouts.layout4')
-@section('title', 'Blog Details || techguru || IT Solutions & Technology Laravel Template')
+@section('title', $post->title)
 
 
 @section('content')

@@ -99,8 +99,10 @@ class SoftwareForm
                             ->imagePreviewHeight('150')
                             ->directory('software')
                             ->disk('public')
+                            ->visibility('public')
                             ->preserveFilenames()
                             ->imageEditor(), // Cho phép chỉnh sửa ảnh cơ bản
+                            
 
                         // Upload file cài đặt (trường file_path)
                         FileUpload::make('file_path')

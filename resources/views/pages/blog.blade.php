@@ -1,5 +1,5 @@
 @extends('layouts.layout4')
-@section('title', 'KhanhHoa - Tin tức công nghệ')
+@section('title', 'Tin tức công nghệ - Khanhhoa')
 
 
 @section('content')
@@ -25,7 +25,7 @@
                         <div class="blog-one__single">
                             <div class="blog-one__img">
                                 <a href="{{ route('blog-detail', $post->slug) }}">
-                                    <img height="200" style="object-fit:cover;"
+                                    <img height="200" style="object-fit: contain;width: 100%;background: #fff;"
                                         src="{{ asset('storage/' . $post->thumbnail) }}" alt="Ảnh bìa">
                                 </a>
                                 <div class="blog-one__tags category_id">

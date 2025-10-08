@@ -1,75 +1,71 @@
-<?php $__env->startSection('title', 'KhanhHoa - Tin tức công nghệ'); ?>
+<?php $__env->startSection('title', 'Tin tức công nghệ - Khanhhoa'); ?>
+
+
 <?php $__env->startSection('content'); ?>
-    <section class="software-page mt-5">
-        <div class="software-page__shape-1"></div>
-        <div class="software-page__shape-2"></div>
+    <section class="blog-page mt-5">
+        <div class="blog-page__shape-1"></div>
+        <div class="blog-page__shape-2"></div>
         <div class="container">
-            <div class="section-title text-center mb-5">
+            <div class="section-title text-center mb-2">
                 <div class="section-title__tagline-box">
                     <div class="section-title__tagline-shape-1"></div>
-                    <span class="section-title__tagline text-uppercase">Thư viện Phần mềm</span>
+                    <span class="section-title__tagline text-uppercase">Tin tức công nghệ</span>
                     <div class="section-title__tagline-shape-2"></div>
                 </div>
-                <h2 class="section-title__title">Các công cụ và phần mềm hữu ích</h2>
             </div>
             <div class="row">
+
                 
-                <?php if($softwares->count() == 0): ?>
+                <?php if($posts->count() == 0): ?>
                     <h1 class="text-center text-uppercase text-danger fw-bold">Đang cập nhật</h1>
                 <?php endif; ?>
-                <?php $__currentLoopData = $softwares; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $software): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="software-one__single">
-                            <div class="software-one__img">
-                                <a href="">
-                                    <img height="200" style=" width:100%; object-fit:contain;"
-                                        src="<?php echo e(asset('storage/' . $software->thumbnail)); ?>" alt="Ảnh bìa">
+                <?php $__currentLoopData = $posts; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $post): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                    <div class="col-xl-4 col-lg-6 col-md-6  ">
+                        <div class="blog-one__single">
+                            <div class="blog-one__img">
+                                <a href="<?php echo e(route('blog-detail', $post->slug)); ?>">
+                                    <img height="200" style="object-fit: contain;width: 100%;background: #fff;"
+                                        src="<?php echo e(asset('storage/' . $post->thumbnail)); ?>" alt="Ảnh bìa">
                                 </a>
-                                <div class="software-one__tags version">
-                                    <span>Phiên bản: <?php echo e($software->version ?? 'Mới nhất'); ?></span>
+                                <div class="blog-one__tags category_id">
+                                    <span><?php echo e($post->category->name); ?></span>
                                 </div>
                             </div>
-                            <div class="software-one__content">
-                                <ul class="software-one__meta list-unstyled">
-                                    
+                            <div class="blog-one__content">
+                                <ul class="blog-one__meta list-unstyled">
                                     <li>
-                                        
-                                        <a><span class="far fa-download"></span> <?php echo e($software->download_count); ?> lượt
-                                            tải</a>
+                                        <a href="<?php echo e(route('blog-detail', $post->slug)); ?>"><span
+                                                class="far fa-calendar-alt"></span><?php echo e(date_format($post->created_at, 'd-m-Y')); ?></a>
                                     </li>
                                     <li>
-                                        
-                                        <?php
-                                            $bytes = $software->file_size ?? 0;
-                                            if ($bytes >= 1073741824) {
-                                                $fileSize = number_format($bytes / 1073741824, 2) . ' GB';
-                                            } elseif ($bytes >= 1048576) {
-                                                $fileSize = number_format($bytes / 1048576, 2) . ' MB';
-                                            } elseif ($bytes >= 1024) {
-                                                $fileSize = number_format($bytes / 1024, 2) . ' KB';
-                                            } else {
-                                                $fileSize = $bytes . ' bytes';
-                                            }
-                                        ?>
-                                        <a><span class="far fa-file-archive"></span> <?php echo e($fileSize); ?></a>
+                                        <a href="<?php echo e(route('blog-detail', $post->slug)); ?>"><span
+                                                class="fal fa-user"></span><?php echo e($post->user->name); ?></a>
                                     </li>
                                 </ul>
-                                <h3 class="software-one__title"><a href=""><?php echo e($software->name); ?></a>
+                                <h3 class="blog-one__title"><a
+                                        href="<?php echo e(route('blog-detail', $post->slug)); ?>"><?php echo e($post->title); ?></a>
                                 </h3>
-                                
-                                <div class="software-one__btn-box">
-                                    <a href="<?php echo e(route('software.download', $software->slug)); ?>" class="software-btn">
-                                        DOWNLOAD
-                                    </a>
+                                <p class="blog-one__text"><?php echo e($post->short_description); ?></p>
+                                <div class="blog-one__btn-box">
+                                    <a href="<?php echo e(route('blog-detail', $post->slug)); ?>" class="thm-btn">Chi tiết<span
+                                            class="icon-right-arrow"></span></a>
                                 </div>
-
                             </div>
                         </div>
                     </div>
                 <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
+
             </div>
         </div>
     </section>
+    <!--Blog Page End-->
+
+
+
+    <!-- Newsletter Two Start -->
+
+
     <?php if (isset($component)) { $__componentOriginal8a8716efb3c62a45938aca52e78e0322 = $component; } ?>
 <?php if (isset($attributes)) { $__attributesOriginal8a8716efb3c62a45938aca52e78e0322 = $attributes; } ?>
 <?php $component = Illuminate\View\AnonymousComponent::resolve(['view' => 'components.footer','data' => []] + (isset($attributes) && $attributes instanceof Illuminate\View\ComponentAttributeBag ? $attributes->all() : [])); ?>
@@ -152,58 +148,4 @@
 <?php endif; ?>
 <?php $__env->stopSection(); ?>
 
-<div class="software-page__pagination">
-    <?php echo e($softwares->links()); ?>
-
-</div>
-
-
-<!-- Modal thông báo tải -->
-<div class="modal" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content text-center p-4">
-            <div class="modal-body">
-                <p class="mb-3" id="modal-download-message">
-                    Hãy giữ vững tinh thần và đừng tắt tab nhé<br> File của bạn đang bay về máy...
-                </p>
-
-                <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <p class="text-dark small">Chờ chút xíu thôi... gần xong rồi đó</p>
-            </div>
-        </div>
-    </div>
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const buttons = document.querySelectorAll('.software-btn');
-        // Lấy Modal object từ Bootstrap
-        const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
-
-        // Lấy phần tử text cần thay đổi bằng ID
-        const messageElement = document.getElementById('modal-download-message');
-
-        buttons.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                // 1. CẬP NHẬT TEXT TẠI ĐÂY
-                // Thay đổi nội dung hiển thị ngay khi click
-                if (messageElement) {
-                    messageElement.innerHTML =
-                        '<span class="text-danger">Hệ thống đang chuẩn bị file...</span><br> <span class="text-danger">Vui lòng không đóng cửa sổ!</span>';
-                }
-
-                // Hiện popup "Đang tải..."
-                modal.show();
-
-                // Cho trình duyệt tự tải file thật (không fetch)
-                window.location.href = this.getAttribute('href');
-
-                // Tuỳ bạn muốn: ẩn modal sau vài giây
-                setTimeout(() => modal.hide(), 8000);
-            });
-        });
-    });
-</script>
-
-<?php echo $__env->make('layouts.layout4', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /home/khanhhoa/sites/techguru/resources/views/pages/software.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.layout4', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /home/khanhhoa/sites/techguru/resources/views/pages/blog.blade.php ENDPATH**/ ?>

@@ -23,7 +23,7 @@
                         <div class="software-one__single">
                             <div class="software-one__img">
                                 <a href="">
-                                    <img height="200" style=" width:100%; object-fit:cover;"
+                                    <img height="200" style=" width:100%; object-fit:contain;"
                                         src="{{ asset('storage/' . $software->thumbnail) }}" alt="Ảnh bìa">
                                 </a>
                                 <div class="software-one__tags version">
