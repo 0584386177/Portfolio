@@ -15,7 +15,7 @@ use Filament\Schemas\Schema;
 use Illuminate\Support\Str;
 use Illuminate\Http\UploadedFile; // <-- THÊM DÒNG NÀY VÀO
 use Filament\Forms\Components\Hidden;
-
+use App\Models\CategorySoftware;
 class SoftwareForm
 {
     public static function configure(Schema $schema): Schema
@@ -84,6 +84,23 @@ class SoftwareForm
                                 ->default(0)
                                 // Chỉ hiển thị trường này khi đang ở trang Edit
                                 ->visibleOn('edit'),
+                            Select::make('category_id')
+                                ->label('Danh mục phần mềm')
+                                ->options(function () {
+                                    $categories = CategorySoftware::with('children')->whereNull('parent_id')->get();
+
+                                    $options = [];
+
+                                    foreach ($categories as $parent) {
+                                        $options[$parent->name] = $parent->children->pluck('name', 'id')->toArray() ?: [];
+                                    }
+
+                                    return $options;
+                                })
+                                ->searchable()
+                                ->required()
+                                ->helperText('Chọn danh mục hoặc danh mục con')
+                                ->native(false),
 
                         ])
                         ->columnSpan(1), // Section này chiếm 1/3 chiều rộng grid
@@ -102,7 +119,7 @@ class SoftwareForm
                             ->visibility('public')
                             ->preserveFilenames()
                             ->imageEditor(), // Cho phép chỉnh sửa ảnh cơ bản
-                            
+
 
                         // Upload file cài đặt (trường file_path)
                         FileUpload::make('file_path')

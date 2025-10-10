@@ -4,21 +4,28 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use App\Models\Software;
+use App\Models\CategorySoftware;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
 class SoftwareController extends Controller
 {
-    public function index(Software $software)
+    public function index(Software $software, Request $request)
     {
+        $search = $request->input('search');
+        $category_filter = $request->input('category');
         // Lấy tất cả phần mềm có trạng thái is_active = true
         // sắp xếp theo ngày tạo mới nhất và phân trang (12 sản phẩm mỗi trang)
-        $softwares = Software::where('is_active', true)
+        $softwares = Software::query()
+            ->with('category')
+            ->where('is_active', true)
+            ->search($search)
+            ->filter($category_filter)
             ->latest()
             ->paginate(12);
-
+        $categories_parent = CategorySoftware::whereNull('parent_id')->get();
         // Trả về view 'software.index' và truyền biến 'softwares' vào view đó
-        return view('pages.software', compact('softwares'));
+        return view('pages.software', compact('softwares', 'categories_parent'));
     }
     public function download(Software $software)
     {

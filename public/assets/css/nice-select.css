@@ -29,9 +29,7 @@
     width: auto;
 }
 
-.nice-select:hover {
-    border-color: #6e7a7a;
-}
+
 
 .nice-select:active,
 .nice-select.open,
@@ -123,8 +121,8 @@
 
 
 .nice-select .list {
-    background-color: var(--techguru-base);
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 0 0 5px 5px;
     box-sizing: border-box;
     margin-top: 0px;
     opacity: 0;
@@ -145,11 +143,9 @@
     z-index: 9;
 }
 
-.nice-select .list:hover .option:not(:hover) {
-    background-color: transparent !important;
-}
 
 .nice-select .option {
+    background: #191919;
     color: #ffffff;
     font-weight: 400;
     line-height: 40px;

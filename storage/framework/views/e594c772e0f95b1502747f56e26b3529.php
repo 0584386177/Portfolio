@@ -4,7 +4,7 @@
         <div class="software-page__shape-1"></div>
         <div class="software-page__shape-2"></div>
         <div class="container">
-            <div class="section-title text-center mb-5">
+            <div class="section-title text-center mb-4">
                 <div class="section-title__tagline-box">
                     <div class="section-title__tagline-shape-1"></div>
                     <span class="section-title__tagline text-uppercase">Thư viện Phần mềm</span>
@@ -12,61 +12,91 @@
                 </div>
                 <h2 class="section-title__title">Các công cụ và phần mềm hữu ích</h2>
             </div>
+
             <div class="row">
                 
                 <?php if($softwares->count() == 0): ?>
-                    <h1 class="text-center text-uppercase text-danger fw-bold">Đang cập nhật</h1>
-                <?php endif; ?>
-                <?php $__currentLoopData = $softwares; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $software): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-                    <div class="col-6 col-md-6 col-lg-4 col-xl-3">
-                        <div class="software-one__single">
-                            <div class="software-one__img">
-                                <a href="">
-                                    <img height="200" style=" width:100%; object-fit:contain;"
-                                        src="<?php echo e(asset('storage/' . $software->thumbnail)); ?>" alt="Ảnh bìa">
-                                </a>
-                                <div class="software-one__tags version">
-                                    <span>Phiên bản: <?php echo e($software->version ?? 'Mới nhất'); ?></span>
-                                </div>
-                            </div>
-                            <div class="software-one__content">
-                                <ul class="software-one__meta list-unstyled">
-                                    
-                                    <li>
-                                        
-                                        <a><span class="far fa-download"></span> <?php echo e($software->download_count); ?> lượt
-                                            tải</a>
-                                    </li>
-                                    <li>
-                                        
-                                        <?php
-                                            $bytes = $software->file_size ?? 0;
-                                            if ($bytes >= 1073741824) {
-                                                $fileSize = number_format($bytes / 1073741824, 2) . ' GB';
-                                            } elseif ($bytes >= 1048576) {
-                                                $fileSize = number_format($bytes / 1048576, 2) . ' MB';
-                                            } elseif ($bytes >= 1024) {
-                                                $fileSize = number_format($bytes / 1024, 2) . ' KB';
-                                            } else {
-                                                $fileSize = $bytes . ' bytes';
-                                            }
-                                        ?>
-                                        <a><span class="far fa-file-archive"></span> <?php echo e($fileSize); ?></a>
-                                    </li>
-                                </ul>
-                                <h3 class="software-one__title"><a href=""><?php echo e($software->name); ?></a>
-                                </h3>
-                                
-                                <div class="software-one__btn-box">
-                                    <a href="<?php echo e(route('software.download', $software->slug)); ?>" class="software-btn">
-                                        DOWNLOAD
-                                    </a>
-                                </div>
+                    <h1 class="text-center text-uppercase text-danger fw-bold pt-0">Đang cập nhật</h1>
+                    <button class="btn btn-back">
+                        <a href="<?php echo e(route('software')); ?>"><i class="fas fa-arrow-left"></i> Back</a></button>
+                <?php else: ?>
+                    <form action="<?php echo e(route('software')); ?>" method="GET"
+                        class="software-filter-bar d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4">
+                        
+                        <div class="filter-start d-flex align-items-center gap-2">
+                            <select name="category" class="form-select nice-select form-select-sm">
+                                <option value="" disabled selected hidden>Lựa chọn danh mục</option>
+                                <?php $__currentLoopData = $categories_parent; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $category): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                                    <option value="<?php echo e($category->id); ?>"><?php echo e($category->name); ?></option>
+                                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                            </select>
 
+
+                            <button type="submit"><i class="fas fa-filter"></i> Lọc</button>
+                        </div>
+
+                        
+                        <div class="filter-end">
+                            <form method="GET" action="" class="position-relative" style="width: 240px;">
+                                <i class="far fa-search search-icon"></i>
+                                <input type="text" name="search" class="form-control form-control-sm search-input"
+                                    placeholder="Tìm kiếm phần mềm...">
+                            </form>
+                        </div>
+
+                    </form>
+                    <?php $__currentLoopData = $softwares; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $software): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <div class="col-6 col-md-6 col-lg-4 col-xl-3">
+                            <div class="software-one__single">
+                                <div class="software-one__img">
+                                    <a href="">
+                                        <img height="200" style=" width:100%; object-fit:contain;"
+                                            src="<?php echo e(asset('storage/' . $software->thumbnail)); ?>" alt="Ảnh bìa">
+                                    </a>
+                                    <div class="software-one__tags version">
+                                        <span>Phiên bản: <?php echo e($software->version ?? 'Mới nhất'); ?></span>
+                                    </div>
+                                </div>
+                                <div class="software-one__content">
+                                    <ul class="software-one__meta list-unstyled">
+                                        
+                                        <li>
+                                            
+                                            <a><span class="far fa-download"></span> <?php echo e($software->download_count); ?> lượt
+                                                tải</a>
+                                        </li>
+                                        <li>
+                                            
+                                            <?php
+                                                $bytes = $software->file_size ?? 0;
+                                                if ($bytes >= 1073741824) {
+                                                    $fileSize = number_format($bytes / 1073741824, 2) . ' GB';
+                                                } elseif ($bytes >= 1048576) {
+                                                    $fileSize = number_format($bytes / 1048576, 2) . ' MB';
+                                                } elseif ($bytes >= 1024) {
+                                                    $fileSize = number_format($bytes / 1024, 2) . ' KB';
+                                                } else {
+                                                    $fileSize = $bytes . ' bytes';
+                                                }
+                                            ?>
+                                            <a><span class="far fa-file-archive"></span> <?php echo e($fileSize); ?></a>
+                                        </li>
+                                    </ul>
+                                    <h3 class="software-one__title"><a href=""><?php echo e($software->name); ?></a>
+                                    </h3>
+                                    
+                                    <div class="software-one__btn-box">
+                                        <a href="<?php echo e(route('software.download', $software->slug)); ?>" class="software-btn">
+                                            DOWNLOAD
+                                        </a>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                    </div>
-                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+                <?php endif; ?>
+
             </div>
         </div>
     </section>

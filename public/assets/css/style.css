@@ -52,16 +52,10 @@ body.locked {
   overflow: hidden;
 }
 
-a {
-  color: var(--techguru-base);
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-}
 
-a,
-a:hover,
-a:focus,
-a:visited {
+
+a {
+  color: white;
   text-decoration: none;
 }
 
