@@ -3,6 +3,7 @@
 use App\Http\Controllers\Frontend\BlogController;
 use App\Http\Controllers\Frontend\CategoryPostController;
 use App\Http\Controllers\Frontend\CategorySoftwareController;
+use App\Http\Controllers\Frontend\CustomerController;
 use App\Http\Controllers\Frontend\PortfolioController;
 use App\Http\Controllers\Frontend\SoftwareController;
 use Illuminate\Support\Facades\Route;
@@ -34,8 +35,12 @@ Route::get('/software', [SoftwareController::class, 'index'])
     ->name('software');
 Route::get('software/danh-muc/{slug}', [CategorySoftwareController::class, 'show'])
     ->name('category.software.show');
+
 Route::get('/softwares/download/{software:slug}', [SoftwareController::class, 'download'])->name('software.download');
-Route::get('/softwares/download/{software:slug}', [SoftwareController::class, 'download'])->name('software.download');
+// Customer Routes
+Route::post('/customers', [CustomerController::class, 'store'])->name('customers.store');
+
+
 // Pages Routes about
 Route::get('/about', [PagesController::class, 'about'])
     ->name('about');

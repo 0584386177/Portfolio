@@ -285,7 +285,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0 rounded-3">
                         <img height="200" style="object-fit: contain;"
-                            src="https://techservicelap.vn/wp-content/uploads/2025/04/logo-header-1024x313.png"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLrHVjuqmRfAkf7JSXK_oz9qdeNrc9xJGFpQ&s"
                             class="card-img-top rounded-top-3" alt="Website Dịch Vụ Sửa Chữa">
                         <div class="card-body bg-dark">
                             <h4 class="card-title">Tech Service</h4>
@@ -307,12 +307,12 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0 rounded-3">
                         <img height="200" style="object-fit: contain;"
-                            src="https://beta.techservicelap.vn/wp-content/uploads/2025/07/logo-openit-v1.svg"
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYR99SqX_tsTyEBemHAmlR1MJyvWtke5V1sJ6A_N5RRkRM18R5Jy3BDjGL6dhrJ1xdoyk&usqp=CAU"
                             class="card-img-top rounded-top-3" alt="Website Open IT">
                         <div class="card-body bg-dark">
                             <h4 class="card-title">Open IT</h4>
                             <p class="card-text small text-warning">
-                                Phát triển website chia sẻ kiến thức sửa chữa phần cứng bằng <strong>WordPress</strong>,
+                                Phát triển website chia sẻ kiến thức sửa chữa phần cứng bằng <strong>Laravel</strong>,
                                 tích hợp giải pháp <strong>crawl dữ liệu từ iFixit</strong> để thử nghiệm quản lý & hiển thị
                                 nội dung,
                                 cùng tính năng tìm kiếm thông minh.
@@ -326,7 +326,7 @@
                         </div>
                     </div>
                 </div>
-
+c
 
 
                 <!-- Project 4 -->

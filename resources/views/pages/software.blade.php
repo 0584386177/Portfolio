@@ -66,7 +66,7 @@
                                             src="{{ asset('storage/' . $software->thumbnail) }}" alt="Ảnh bìa">
                                     </a>
                                     <div class="software-one__tags version">
-                                        <span>Phiên bản: {{ $software->version ?? 'Mới nhất' }}</span>
+                                        <span>Version: {{ $software->version ?? 'Mới nhất' }}</span>
                                     </div>
                                 </div>
                                 <div class="software-one__content">

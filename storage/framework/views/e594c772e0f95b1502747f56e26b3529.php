@@ -65,7 +65,7 @@
                                             src="<?php echo e(asset('storage/' . $software->thumbnail)); ?>" alt="Ảnh bìa">
                                     </a>
                                     <div class="software-one__tags version">
-                                        <span>Phiên bản: <?php echo e($software->version ?? 'Mới nhất'); ?></span>
+                                        <span>Version: <?php echo e($software->version ?? 'Mới nhất'); ?></span>
                                     </div>
                                 </div>
                                 <div class="software-one__content">
