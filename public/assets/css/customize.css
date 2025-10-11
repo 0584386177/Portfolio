@@ -5,6 +5,7 @@
     background: black;
     border: none;
 }
+
 /* HIDDEN SELECT OPTION */
 
 /* Timeline Style */
@@ -156,7 +157,7 @@
 /* ====== SEARCH BUTTON ====== */
 
 .software-filter-bar button {
-    width: 70px;
+    width: 100px;
     height: 40px;
     font-size: 15px;
     font-weight: 600;
@@ -166,6 +167,10 @@
     border-radius: 8px;
     transition: all 0.3s ease;
     text-transform: uppercase;
+}
+
+.software-filter-bar .action .btn-reset {
+    background: #dc3545;
 }
 
 .software-filter-bar .form-select,

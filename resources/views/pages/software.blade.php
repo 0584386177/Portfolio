@@ -26,14 +26,25 @@
                         {{-- Cột trái: Bộ lọc select --}}
                         <div class="filter-start d-flex align-items-center gap-2">
                             <select name="category" class="form-select nice-select form-select-sm">
-                                <option value="" disabled selected hidden>Lựa chọn danh mục</option>
+                                <option value="" disabled selected hidden>Lọc danh mục</option>
                                 @foreach ($categories_parent as $category)
                                     <option value="{{ $category->id }}">{{ $category->name }}</option>
                                 @endforeach
                             </select>
 
-
-                            <button type="submit"><i class="fas fa-filter"></i> Lọc</button>
+                            <select name="sort" class="form-select form-select-sm">
+                                <option disabled hidden selected>Lọc sản phẩm</option>
+                                <option value="luot-tai-cao-nhat">Lượt tải cao nhất</option>
+                                <option value="sap-xep-a-z">Sắp xếp từ A->Z</option>
+                                <option value="sap-xep-z-a">Sắp xếp từ Z->A</option>
+                                <option value="san-pham-moi-dang">Sản phẩm mới đăng</option>
+                            </select>
+                            <div class="d-flex gap-3 action">
+                                <button type="submit"><i class="fas fa-filter"></i> Lọc</button>
+                                <button type="submit" class="btn btn-reset"><a href="{{ route('software') }}"><i
+                                            class="far fa-sync-alt"></i>
+                                        Reset</a></button>
+                            </div>
                         </div>
 
                         {{-- Cột phải: Ô search --}}
@@ -131,31 +142,43 @@
         </div>
     </div>
 </div>
+
+<!-- Modal thông báo tải -->
+<div class="modal fade" id="downloadModal" tabindex="-1" aria-labelledby="downloadModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content text-center p-4 border-0 shadow-lg rounded-4">
+            <div class="modal-body">
+                <p class="mb-3 fw-semibold text-danger" id="modal-download-message">
+                    File đang được tải về<br> Vui lòng đợi chút nhé...
+                </p>
+                <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const buttons = document.querySelectorAll('.software-btn');
-        // Lấy Modal object từ Bootstrap
-        const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
-
-        // Lấy phần tử text cần thay đổi bằng ID
         const messageElement = document.getElementById('modal-download-message');
 
         buttons.forEach(btn => {
             btn.addEventListener('click', function(e) {
-                // 1. CẬP NHẬT TEXT TẠI ĐÂY
-                // Thay đổi nội dung hiển thị ngay khi click
+                e.preventDefault();
+
+                // Khởi tạo modal chỉ khi cần
+                const modal = new bootstrap.Modal(document.getElementById('downloadModal'));
+
                 if (messageElement) {
                     messageElement.innerHTML =
                         '<span class="text-danger">Hệ thống đang chuẩn bị file...</span><br> <span class="text-danger">Vui lòng không đóng cửa sổ!</span>';
                 }
 
-                // Hiện popup "Đang tải..."
                 modal.show();
 
-                // Cho trình duyệt tự tải file thật (không fetch)
                 window.location.href = this.getAttribute('href');
 
-                // Tuỳ bạn muốn: ẩn modal sau vài giây
                 setTimeout(() => modal.hide(), 8000);
             });
         });

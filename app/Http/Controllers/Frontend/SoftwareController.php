@@ -14,6 +14,7 @@ class SoftwareController extends Controller
     {
         $search = $request->input('search');
         $category_filter = $request->input('category');
+        $sort = $request->input('sort');
         // Lấy tất cả phần mềm có trạng thái is_active = true
         // sắp xếp theo ngày tạo mới nhất và phân trang (12 sản phẩm mỗi trang)
         $softwares = Software::query()
@@ -21,6 +22,7 @@ class SoftwareController extends Controller
             ->where('is_active', true)
             ->search($search)
             ->filter($category_filter)
+            ->sort($sort)
             ->latest()
             ->paginate(12);
         $categories_parent = CategorySoftware::whereNull('parent_id')->get();

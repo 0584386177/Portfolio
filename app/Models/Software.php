@@ -74,4 +74,28 @@ class Software extends Model
         });
     }
 
+    public function scopeSort(Builder $query, $keyword)
+    {
+        return $query
+            ->when($keyword == 'luot-tai-cao-nhat' ?? null, function (Builder $q) use ($keyword) {
+                $q
+                    ->orderBy('download_count', 'desc');
+            })
+            ->when($keyword == 'sap-xep-a-z', function (Builder $q) use ($keyword) {
+                $q
+                    ->orderBy('name', 'asc');
+            })
+            ->when($keyword == 'sap-xep-z-a', function (Builder $q) use ($keyword) {
+                $q
+                    ->orderBy('name', 'desc');
+            })
+            ->when($keyword == 'san-pham-moi-dang', function (Builder $q) use ($keyword) {
+                $q
+                    ->orderBy('created_at', 'desc');
+            })
+
+
+        ;
+
+    }
 }
